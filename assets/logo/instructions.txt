@@ -1,0 +1,1 @@
+Ici, on stocke toutes les logos du site internet. Tu dois les nommer de la façon suivante : nomduprojet_nomdel'image. S'ils apparaissent en dehors d'un projet, tu remplaces le nom du projet par l'emplacement dans le site (ex: header, footer).
