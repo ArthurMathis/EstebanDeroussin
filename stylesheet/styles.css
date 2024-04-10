@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Montreal';
+    src: url('assets/typo/Neue Montreal/Montreal.otf');
+}
+
+@font-face {
+    font-family: 'Supply';
+    src: url('assets/typo/Supply/PPSupplySans-Ultralight.otf');
+}
+
+:root {
+    --police-extrabig: 96px;
+    --police-big: 90px;
+    --police-normal: 15px;
+    --police-small: 10px;
+
+    --black: #000;
+    --white: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Montreal';
+}
