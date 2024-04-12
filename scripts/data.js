@@ -23,9 +23,6 @@ class horaire{
         this.setHeures(instant);
         this.setMinutes(instant);
         this.setSecondes(instant);
-
-        // Affichez l'heure actuelle
-        console.log(`Il est actuellement ${this.toString()}.`);
     }
 
     toString() {
@@ -39,3 +36,35 @@ class horaire{
 }
 
 let heure_horloge = new horaire();
+
+class DateCustom {
+    static moisEnLettres = ['jan', 'fév', 'mar', 'avr', 'mai', 'juin', 'juil', 'aoû', 'sep', 'oct', 'nov', 'déc'];
+
+    constructor() {
+        this.setDate(new Date());
+    }
+
+    setDate(date) {
+        this.setJour(date);
+        this.setJourNumber(date);
+        this.setMonth(date);
+    }
+
+    setJour(date) {
+        this.jourSemaine = date.toLocaleString('fr-FR', { weekday: 'short' });
+    }
+
+    setJourNumber(date) {
+        this.jour = date.getDate();
+    }
+
+    setMonth(date) {
+        this.month = DateCustom.moisEnLettres[date.getMonth()];
+    }
+
+    toString() {
+        return `${this.jourSemaine} ${this.jour} ${this.month}`;
+    }
+}
+
+const localDate = new DateCustom();
