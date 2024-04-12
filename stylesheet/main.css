@@ -21,7 +21,7 @@ body {
   content: "";
   position: absolute;
   width: 100dvw;
-  height: 85px;
+  height: 84px;
   backdrop-filter: blur(15px);
   transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
 }

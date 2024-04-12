@@ -30,3 +30,8 @@
     font-family: 'Montreal';
     font-weight: 400;
 }
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
