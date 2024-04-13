@@ -32,6 +32,7 @@ body {
 }
 #menu #logo img {
   height: 40px;
+  max-width: 50%;
 }
 #menu #logo p {
   width: 30px;
