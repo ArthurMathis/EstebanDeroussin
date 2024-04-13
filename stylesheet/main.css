@@ -74,7 +74,11 @@ body {
 #entete .rectangle {
   width: 100%;
   height: 55px;
-  background-color: var(--black);
+  will-change: box-shadow;
+  transition: box-shadow ease 600ms;
+}
+#entete .rectangle.active {
+  box-shadow: inset 0 55px 0 0 var(--black);
 }
 
 #menu_de_navigation {
