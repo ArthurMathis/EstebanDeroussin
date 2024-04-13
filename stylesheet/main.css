@@ -16,7 +16,6 @@ body {
   z-index: 10;
   margin: 7.5px var(--margin) 0 var(--margin);
   background: transparent;
-  /* ici */
 }
 #menu::before {
   content: "";
@@ -59,7 +58,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border-bottom: 1px solid var(--black);
 }
 #entete .entete_margin {
   width: 100dvw;
@@ -80,10 +78,10 @@ body {
 
 #menu_de_navigation {
   display: flex;
+  flex-direction: row;
   width: 100%;
   min-height: 25dvh;
   padding: calc(var(--margin) * 1.2) 0;
-  border-bottom: 1px solid var(--black);
 }
 #menu_de_navigation .left {
   display: flex;

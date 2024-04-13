@@ -18,7 +18,6 @@ body{
     z-index: 10;
 
     margin: 7.5px var(--margin) 0 var(--margin);
-    //border-bottom: 1px solid var(--black);
     
     background: transparent;
 
@@ -32,8 +31,6 @@ body{
         backdrop-filter: blur(11px);
         transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
     }
-
-    /* ici */
 
     & #logo{
         display: flex;
@@ -78,8 +75,6 @@ body{
     flex-direction: column;
     gap: 15px;
 
-    border-bottom: 1px solid var(--black);
-
     & .entete_margin{
         width: 100dvw;
         height: 50px;
@@ -104,12 +99,11 @@ body{
 
 #menu_de_navigation{
     display: flex;
+    flex-direction: row;
     width: 100%;
     min-height: 25dvh;
 
     padding: calc(var(--margin) * 1.2) 0;
-
-    border-bottom: 1px solid var(--black);
 
     & .left{
         display: flex;
