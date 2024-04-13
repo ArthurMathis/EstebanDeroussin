@@ -9,6 +9,8 @@ setInterval(() => {
 const calendrier = document.getElementById('calendrier');
 calendrier.textContent = localDate.toString();
 
+document.body.style.overflow = 'hidden';
+
 // Ajout de l'animation du rectangle
 inView('.rectangle').on('enter', function(c){
     c.classList.add('active');
@@ -24,7 +26,7 @@ inView('.rectangle').on('enter', function(c){
 
             setTimeout(() => {
                 const texts = new AnimateParagraphe('.opacity');
-                
+                document.body.style.overflow = 'auto';
             }, 600);
         }, 850);
     }, 600);
