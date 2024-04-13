@@ -11,13 +11,17 @@
 :root {
     --police-extrabig: 96px;
     --police-big: 90px;
-    --police-normal: 15px;
-    --police-small: 10px;
+    --police-normal: 22px;
+    --police-small: 15px;
+    --police-extra-small: 12px;
 
     --black: #000;
     --white: #fff;
 
     --margin: 20px;
+
+    --police-weigth-normal: 400;
+    --police-weigth-small: 100;
 }
 
 * {
@@ -28,7 +32,10 @@
     box-sizing: border-box;
 
     font-family: 'Montreal';
-    font-weight: 400;
+    font-weight: var(--police-weigth-normal);
+
+    text-decoration: none;
+    list-style: none;
 }
 
 a {
