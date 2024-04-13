@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="stylesheet/styles.css">
     <link rel="stylesheet" href="stylesheet/main.css">
     <link rel="stylesheet" href="stylesheet/lignes.css">
+    <link rel="stylesheet" href="stylesheet/AnimateParagraphe.css">
 
     <script src="scripts/in-view.min.js"></script>
+    <script src="scripts/AnimateParagraphe.js"></script>
     <script src="scripts/lignes.js"></script>
 </head>
 <body>
@@ -49,33 +51,40 @@
     <div id="menu_de_navigation" class="lignes">
         <section class="left">
             <article>
-                <p>Mes domaines de compétences</p>
+                <p class="fade-in">Mes domaines de compétences</p>
                 <nav>
-                    <a href="#">Typographie</a>
-                    <a href="#">Motion Design</a>
-                    <a href="#">UX/UI</a>
-                    <a href="#">Branding</a>
-                    <a href="#">Illustration</a>
+                    <a href="#" class="fade-in">Typographie</a>
+                    <a href="#" class="fade-in">Motion Design</a>
+                    <a href="#" class="fade-in">UX/UI</a>
+                    <a href="#" class="fade-in">Branding</a>
+                    <a href="#" class="fade-in">Illustration</a>
                 </nav>
             </article>
             <div>
-                <p>Projets :</p>
+                <p class="fade-in">Projets :</p>
                 <ul>
-                    <li>01 Typographie</li>
-                    <li>02 Typographie</li>
-                    <li>03 Typographie</li>
-                    <li>04 Typographie</li>
+                    <li class="fade-in">01 Typographie</li>
+                    <li class="fade-in">02 Typographie</li>
+                    <li class="fade-in">03 Typographie</li>
+                    <li class="fade-in">04 Typographie</li>
                 </ul>
             </div>
         </section>
         <section class="right">
             <article>
-                <h1>Esteban_</h1>
-                <h1>GraphicDesigner</h1>
+                <h1 class="opacity">Esteban_</h1>
+                <h1 class="opacity">GraphicDesigner</h1>
             </article>
-            <p>scroll pour découvrir !</p>
+            <p class="fade-in">scroll pour découvrir !</p>
         </section>
     </div>
+
+    <section id="about_me" class="lignes">
+        <p>About me</p>
+        <img src="assets/img/accueil_esteban.png">
+        <h1 class="fade-in">Bonjour et bienvenue dans mon portfolio.  Je m’appelle Esteban Deroussin et je suis né le 26 octobre 2003 à Lyon. J’ai intégré depuis trois ans l’école E.artsup dans la filière direction artistique. Ce site est l’aboutissement de trois ans de travail et de passion. Il vous présente mes meilleurs réalisations dans les différents domaines que j’ai pu expérimenter cette année.</h1>
+        <h1 class="fade-in">J’espère que vous prendrez plaisir à le visiter et que cela vous donnera envie d’explorer de nouvelles opportunités avec moi.</h1>
+    </section>
 
     <script src="scripts/data.js"></script>
     <script src="scripts/controler.js"></script>

@@ -152,4 +152,38 @@ body {
   font-size: var(--police-small);
 }
 
+#about_me {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--margin) / 2);
+  padding: calc(var(--margin) / 2) 0;
+}
+#about_me p {
+  transform: translateX(var(--police-small));
+}
+#about_me p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: var(--police-extra-small);
+  height: var(--police-extra-small);
+  background-color: var(--black);
+  border-radius: 50%;
+  transform: translateX(calc(-1 * var(--police-small))) translateY(3px);
+}
+#about_me h1 {
+  font-size: var(--police-big);
+  line-height: 85px;
+  margin: var(--margin) 0;
+}
+#about_me h1:first-of-type {
+  margin-top: calc(var(--margin) * 4);
+}
+#about_me img {
+  align-self: start;
+  height: 400px;
+  object-fit: contain;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -40,6 +40,10 @@
     list-style: none;
 }
 
+::selection{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 body{
     overflow-x: hidden;
 }
