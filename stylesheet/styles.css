@@ -16,10 +16,12 @@
     --police-extra-small: 12px;
 
     --black: #000;
+    --ligth-black: #888;
     --white: #fff;
 
     --margin: 20px;
 
+    --police-weigth-big: 500;
     --police-weigth-normal: 400;
     --police-weigth-small: 100;
 }
@@ -36,6 +38,10 @@
 
     text-decoration: none;
     list-style: none;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 a {
