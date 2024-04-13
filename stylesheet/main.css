@@ -25,6 +25,25 @@ body {
   backdrop-filter: blur(11px);
   transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
 }
+#menu a {
+  position: relative;
+}
+#menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black);
+  transform: scaleX(0);
+  will-change: transform;
+  transform-origin: left;
+  overflow-x: hidden;
+  transition: transform 200ms ease-in-out;
+}
+#menu a:hover::before {
+  transform: scaleX(1);
+}
 #menu #logo {
   display: flex;
   align-items: center;
@@ -37,10 +56,9 @@ body {
 #menu #logo p {
   width: 30px;
 }
-#menu #sous-menu :first-child::after,
-#menu #sous-menu :nth-child(2)::after {
-  content: "/";
-  margin-left: 3px;
+#menu #sous-menu {
+  display: flex;
+  gap: 5px;
 }
 #menu #time {
   display: flex;
@@ -184,6 +202,25 @@ body {
   align-self: start;
   height: 400px;
   object-fit: contain;
+}
+
+#developpement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 25%;
+  z-index: 20;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--white);
+}
+#developpement.active {
+  display: flex;
 }
 
 /*# sourceMappingURL=main.css.map */
