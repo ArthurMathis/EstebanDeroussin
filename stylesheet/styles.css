@@ -1,54 +1,48 @@
 @font-face {
-    font-family: 'Montreal';
-    src: url('../assets/typo/Neue Montreal/PPNeueMontreal-Regular.otf');
+  font-family: "Montreal";
+  src: url("../assets/typo/Neue Montreal/PPNeueMontreal-Regular.otf");
 }
-
 @font-face {
-    font-family: 'Supply';
-    src: url('../assets/typo/Supply/PPSupplySans-Ultralight.otf');
+  font-family: "Supply";
+  src: url("../assets/typo/Supply/PPSupplySans-Ultralight.otf");
 }
-
 :root {
-    --police-extrabig: 96px;
-    --police-big: 90px;
-    --police-normal: 22px;
-    --police-small: 15px;
-    --police-extra-small: 12px;
-
-    --black: #000;
-    --ligth-black: #888;
-    --white: #fff;
-
-    --margin: 20px;
-
-    --police-weigth-big: 500;
-    --police-weigth-normal: 400;
-    --police-weigth-small: 100;
+  --police-extrabig: 96px;
+  --police-big: 90px;
+  --police-normal: 22px;
+  --police-small: 15px;
+  --police-extra-small: 12px;
+  --black: #000;
+  --ligth-black: #888;
+  --white: #fff;
+  --margin: 20px;
+  --police-weigth-big: 500;
+  --police-weigth-normal: 400;
+  --police-weigth-small: 100;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    z-index: 0;
-
-    box-sizing: border-box;
-
-    font-family: 'Montreal';
-    font-weight: var(--police-weigth-normal);
-
-    text-decoration: none;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  font-family: "Montreal";
+  font-weight: var(--police-weigth-normal);
+  text-decoration: none;
+  list-style: none;
 }
 
-::selection{
-    background-color: rgba(0, 0, 0, 0.1);
+::selection {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
 a {
-    color: var(--black);
-    text-decoration: none;
+  color: var(--black);
+  text-decoration: none;
 }
+
+/*# sourceMappingURL=styles.css.map */

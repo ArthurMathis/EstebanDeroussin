@@ -1,0 +1,25 @@
+.lignes{
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+    
+        width: 100%;
+        height: 1px;
+    
+        background-color: var(--black);
+    
+        transform: scaleX(0);
+        will-change: transform;
+        transform-origin: left;
+    
+        overflow-x: hidden;
+        transition: transform 850ms ease-in-out;
+    }
+
+    &.active::after{
+        transform: scaleX(1);
+    }
+}
