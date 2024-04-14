@@ -14,6 +14,7 @@
   --police-extra-small: 12px;
   --black: #000;
   --ligth-black: #888;
+  --dark-white: rgba(0, 0, 0, 0.1);
   --white: #fff;
   --margin: 20px;
   --police-weigth-big: 500;
@@ -33,7 +34,7 @@
 }
 
 ::selection {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--dark-white);
 }
 
 body {
