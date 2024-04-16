@@ -44,3 +44,8 @@ dev_buttons.forEach(button => {
         });
     });
 });
+
+const paralax = document.getElementsByClassName('paralax');
+new simpleParallax(paralax, {
+    scale: 1.2
+});

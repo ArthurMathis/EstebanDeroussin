@@ -1,7 +1,11 @@
 class AnimateParagraphe {
     constructor(selector) {
-        inView(selector).on('enter', function(c) {
+        inView(selector)
+        .on('enter', function(c) {
             c.classList.add('active');
+            
+        }).on('exit', function(c) {
+            c.classList.remove('active');
         });
     }
 }
