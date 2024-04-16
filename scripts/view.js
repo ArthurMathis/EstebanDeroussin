@@ -49,3 +49,30 @@ const paralax = document.getElementsByClassName('paralax');
 new simpleParallax(paralax, {
     scale: 1.2
 });
+
+// Sélectionne le corps de la page
+const body = document.body;
+
+// Empêche le défilement horizontal initialement
+body.style.overflowX = 'hidden';
+
+// Surveille les changements de style sur le corps de la page
+const observer = new MutationObserver((mutationsList) => {
+    // Parcourt chaque mutation
+    for (let mutation of mutationsList) {
+        // Vérifie si la propriété 'overflow-x' a été modifiée
+        if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+            const newValue = body.style.overflowX;
+            // Si la valeur est différente de 'hidden', réapplique 'hidden'
+            if (newValue !== 'hidden') {
+                body.style.overflowX = 'hidden';
+            }
+        }
+    }
+});
+
+// Définit les options pour l'observateur
+const observerOptions = { attributes: true };
+
+// Commence à observer les changements de style sur le corps de la page
+observer.observe(body, observerOptions);
