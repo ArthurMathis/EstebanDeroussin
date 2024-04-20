@@ -33,7 +33,7 @@ inView('.rectangle').on('enter', function(c){
 });
 
 
-const paralax = document.getElementsByClassName('paralax');
+const paralax = document.getElementsByClassName('parallax');
 new simpleParallax(paralax, {
     scale: 1.225
 });

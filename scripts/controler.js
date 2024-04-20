@@ -10,3 +10,23 @@ dev_buttons.forEach(button => {
         });
     });
 });
+
+const galerieButton = document.getElementById('galerieButton');
+const closeGalerieButton = document.getElementById('closeButton');
+const galerie = document.getElementById('galerie');
+
+galerieButton.addEventListener('click', () => {
+    galerie.style.display = 'block';
+
+    setTimeout(() => {
+        closeGalerieButton.addEventListener('click', () => {
+            galerie.classList.add('disparition');
+            setTimeout(() => {
+                galerie.style.display = 'none';
+                galerie.classList.remove('disparition');
+            }, 800);
+        });
+    }, 800);
+});
+
+

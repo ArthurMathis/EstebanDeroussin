@@ -14,7 +14,6 @@
   --police-extra-small: 12px;
   --black: #000;
   --ligth-black: #888;
-  --dark-white: rgba(0, 0, 0, 0.1);
   --white: #fff;
   --margin: 20px;
   --police-weigth-big: 500;
@@ -34,7 +33,7 @@
 }
 
 ::selection {
-  background-color: var(--dark-white);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -44,6 +43,154 @@ body {
 a {
   color: var(--black);
   text-decoration: none;
+}
+
+#menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100dvw - 2 * var(--margin));
+  height: 60px;
+  z-index: 10;
+  margin: 7.5px var(--margin) 0 var(--margin);
+  background: transparent;
+}
+#menu::before {
+  content: "";
+  position: absolute;
+  width: 100dvw;
+  height: 84px;
+  backdrop-filter: blur(11px);
+  transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
+}
+#menu a {
+  position: relative;
+}
+#menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black);
+  transform: scaleX(0);
+  will-change: transform;
+  transform-origin: left;
+  overflow-x: hidden;
+  transition: transform 200ms ease-in-out;
+}
+#menu a:hover::before {
+  transform: scaleX(1);
+}
+#menu #logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#menu #logo img {
+  height: 40px;
+  max-width: 50%;
+}
+#menu #logo p {
+  width: 30px;
+}
+#menu #sous-menu {
+  display: flex;
+  gap: 5px;
+}
+#menu #time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#menu #time p {
+  font-family: Supply;
+  font-weight: 200;
+}
+#menu #time img {
+  height: var(--police-normal);
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disapparition {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#galerie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100dvw;
+  min-height: 100dvh;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(11px);
+  will-change: opacity animation;
+  animation: ease apparition 800ms forwards;
+}
+#galerie.disparition {
+  animation: ease disapparition 800ms forwards;
+}
+#galerie nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 66px;
+  margin-top: 3px;
+}
+#galerie nav::after {
+  background-color: var(--white);
+}
+#galerie nav p {
+  position: relative;
+  margin-left: 52%;
+  color: var(--white);
+}
+#galerie nav p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  transform: scaleX(0);
+  will-change: transform;
+  transform-origin: left;
+  overflow-x: hidden;
+  transition: transform 200ms ease-in-out;
+}
+#galerie nav p:hover::before {
+  transform: scaleX(1);
+}
+#galerie content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--margin);
+  margin: 0 auto;
+  padding: var(--margin);
+  width: 100%;
+  max-height: 100dvh;
+  overflow-y: scroll;
+}
+#galerie content img {
+  min-width: calc(25% - var(--margin));
+  max-height: 40dvh;
 }
 
 /*# sourceMappingURL=styles.css.map */
