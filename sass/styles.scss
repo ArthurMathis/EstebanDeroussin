@@ -174,7 +174,9 @@ a {
     min-height: 100dvh;
     z-index: 30;
 
-    background-color: rgba(0,0,0,0.7);
+    padding: var(--margin);
+
+    background-color: rgba(0,0,0,0.8);
     backdrop-filter: blur(11px);
 
     will-change: opacity animation;
@@ -232,9 +234,8 @@ a {
         flex-direction: column;
         gap: var(--margin);
 
-        margin: 0 auto;
-        margin-left: 20%;
-        padding: var(--margin);
+        margin: 0 0 0 20%;
+        padding-top: var(--margin);
 
         width: 100%;
         max-height: 100dvh;
@@ -244,13 +245,22 @@ a {
 
         & .projet{
             display: flex;
+            width: 80%;
+
+            margin: 0;
+            padding-top: var(--margin);
+
+            &::after{
+                bottom: 100%;
+                background-color: var(--white);
+            }
 
             & aside{
                 display: flex;
                 flex-direction: column;
                 gap: calc(var(--margin) / 2);
 
-                width: 30%;
+                width: 35%;
 
                 & .titre,
                 & .domaine, 
@@ -284,13 +294,43 @@ a {
             }
 
             & .items-galerie{
-                width: 45%;
-            }
-        }
+                display: flex;
+                flex-wrap: wrap;
+                gap: 17px;
 
-        & img{
-            min-width: calc(25% - var(--margin));
-            max-height: 40dvh;
+                width: 60%;
+
+                & .item{
+                    margin-bottom: calc(var(--margin) * 4);
+                    & p{
+                        padding-top : 10px;
+                        text-align: center;
+                    }
+    
+                    & img, & video{
+                        min-width: calc(25% - var(--margin));
+                        max-height: 40dvh;
+                    }
+                }
+
+                & .big-item{
+                    max-width: calc(75% - var(--margin));
+
+                    & img, & video{
+                        width: 100%;
+                        max-height: none;
+
+                    }
+                }
+
+                & .small-item{
+                    width: 25%;
+
+                    & img, & video{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
