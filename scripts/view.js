@@ -9,7 +9,8 @@ setInterval(() => {
 const calendrier = document.getElementById('calendrier');
 calendrier.textContent = localDate.toString();
 
-document.body.style.overflow = 'hidden';
+// Empêche le défilement horizontal initialement
+body.style.overflowX = 'hidden';
 
 // Ajout de l'animation du rectangle
 inView('.rectangle').on('enter', function(c){
@@ -32,17 +33,12 @@ inView('.rectangle').on('enter', function(c){
     }, 600);
 });
 
-
+// Ajout de l'effet parallax sur les images portant la classe parallax
 const paralax = document.getElementsByClassName('parallax');
 new simpleParallax(paralax, {
     scale: 1.225
 });
 
-// Sélectionne le corps de la page
-const body = document.body;
-
-// Empêche le défilement horizontal initialement
-body.style.overflowX = 'hidden';
 
 // Surveille les changements de style sur le corps de la page
 const observer = new MutationObserver((mutationsList) => {
@@ -61,6 +57,5 @@ const observer = new MutationObserver((mutationsList) => {
 
 // Définit les options pour l'observateur
 const observerOptions = { attributes: true };
-
 // Commence à observer les changements de style sur le corps de la page
 observer.observe(body, observerOptions);
