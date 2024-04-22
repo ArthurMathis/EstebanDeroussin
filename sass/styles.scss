@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Montreal Bold';
+    src: url('../assets/typo/Neue Montreal/PPNeueMontreal-Bold.otf');
+}
+
+@font-face {
     font-family: 'Supply';
     src: url('../assets/typo/Supply/PPSupplySans-Ultralight.otf');
 }
@@ -11,7 +16,7 @@
 :root {
     --police-extrabig: 96px;
     --police-big: 90px;
-    --police-normal: 22px;
+    --police-normal: 18px;
     --police-small: 15px;
     --police-extra-small: 12px;
 
@@ -21,7 +26,6 @@
 
     --margin: 20px;
 
-    --police-weigth-big: 500;
     --police-weigth-normal: 400;
     --police-weigth-small: 100;
 }
@@ -34,6 +38,7 @@
     box-sizing: border-box;
 
     font-family: 'Montreal';
+    font-size: var(--police-bigsmall);
     font-weight: var(--police-weigth-normal);
 
     text-decoration: none;
@@ -224,21 +229,68 @@ a {
 
     & content {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: var(--margin);
 
         margin: 0 auto;
+        margin-left: 20%;
         padding: var(--margin);
 
         width: 100%;
         max-height: 100dvh;
         overflow-y: scroll;
+        
+        color: var(--white);
+
+        & .projet{
+            display: flex;
+
+            & aside{
+                display: flex;
+                flex-direction: column;
+                gap: calc(var(--margin) / 2);
+
+                width: 30%;
+
+                & .titre,
+                & .domaine, 
+                & .outils{
+                    display: flex;
+                    gap: var(--margin);
+
+
+                    & h1{
+                        font-family: 'Montreal Bold';
+                        font-size: var(--police-normal);
+                    }
+                }
+
+                & .domaine, 
+                & .outils{
+                    padding-bottom: calc(var(--margin) / 4);
+
+                    &::after{
+                        background-color: var(--white);
+                    }
+
+                    h2:first-child{
+                        width: 15%;
+                    }
+                }
+            }
+
+            & .mask{
+                width: 5%;
+            }
+
+            & .items-galerie{
+                width: 45%;
+            }
+        }
 
         & img{
             min-width: calc(25% - var(--margin));
             max-height: 40dvh;
-            //margin: 0 0 0 70%;
         }
     }
 }
