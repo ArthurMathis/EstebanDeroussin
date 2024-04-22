@@ -249,6 +249,7 @@ a {
 
             margin: 0;
             padding-top: var(--margin);
+            padding-bottom: var(--margin);
 
             &::after{
                 bottom: 100%;
@@ -296,40 +297,47 @@ a {
             & .items-galerie{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 17px;
+                gap: var(--margin);
 
                 width: 60%;
 
                 & .item{
                     margin-bottom: calc(var(--margin) * 4);
+                    width: calc(50% - calc(var(--margin) / 2));
+
                     & p{
                         padding-top : 10px;
                         text-align: center;
                     }
     
+                    
                     & img, & video{
-                        min-width: calc(25% - var(--margin));
-                        max-height: 40dvh;
+                        max-width: 100%;
+                        max-height: 90dvh;
                     }
+                    
                 }
 
                 & .big-item{
-                    max-width: calc(75% - var(--margin));
-
-                    & img, & video{
-                        width: 100%;
-                        max-height: none;
-
-                    }
+                    width: calc(75% - var(--margin));
                 }
 
                 & .small-item{
                     width: 25%;
+                }
 
+                & .solo-item{
+                    width: 100%;
+                }
+
+                & .solo-item, 
+                & .small-item,
+                & .big-item{
                     & img, & video{
                         width: 100%;
                     }
                 }
+
             }
         }
     }
