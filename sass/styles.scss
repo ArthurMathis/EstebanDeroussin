@@ -86,8 +86,14 @@ a {
         transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
     }
 
+    & p {
+        font-size: var(--police-small);
+    }
+
     & a{
         position: relative;
+        height: var(--police-normal);
+        font-size: var(--police-small);
 
         &::before{
             content: '';

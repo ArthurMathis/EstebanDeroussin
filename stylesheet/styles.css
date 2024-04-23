@@ -70,8 +70,13 @@ a {
   backdrop-filter: blur(11px);
   transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
 }
+#menu p {
+  font-size: var(--police-small);
+}
 #menu a {
   position: relative;
+  height: var(--police-normal);
+  font-size: var(--police-small);
 }
 #menu a::before {
   content: "";
