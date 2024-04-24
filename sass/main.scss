@@ -366,7 +366,6 @@ body {
 
             & .reseaux-arthur{
                 display: flex;
-                //justify-content: right;
                 flex-wrap: wrap;
                 gap: var(--margin);
                 
@@ -426,7 +425,7 @@ body {
         width: 20%;
 
         & > p{
-            width: 40%;
+            width: 30%;
             font-size: var(--police-small);
             padding-bottom: calc(7 * var(--police-small));
         }
@@ -436,6 +435,8 @@ body {
             flex-direction: column;
             justify-content: right;
             align-items: end;
+
+            width: 70%;
 
             & p{
                 font-size: var(--police-small);
