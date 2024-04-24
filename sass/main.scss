@@ -82,7 +82,7 @@ body {
                 display: flex;
                 gap: 15px;
                 
-                & a {
+                & > a {
                     font-family: 'Supply';
                     font-weight: 200;
                     font-size: var(--police-extra-small);
@@ -111,8 +111,15 @@ body {
                 font-size: var(--police-small);
             } 
 
-            & ul li{
+            & ul a{
                 font-size: var(--police-small);
+
+                will-change: opacity;
+                transition: ease 200ms opacity;
+        
+                &:hover{
+                    opacity: 0.5;
+                }   
             }
         }
     }
@@ -438,8 +445,15 @@ body {
 
             width: 70%;
 
-            & p{
+            & a{
                 font-size: var(--police-small);
+
+                will-change: opacity;
+                transition: ease 200ms opacity;
+
+                &:hover{
+                    opacity: 0.5;
+                }
             }
         }
     }
