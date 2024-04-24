@@ -148,6 +148,7 @@ a {
   min-height: 100dvh;
   z-index: 30;
   padding: var(--margin);
+  padding-left: 20%;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(11px);
   will-change: opacity animation;
@@ -160,14 +161,15 @@ a {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 66px;
-  margin-top: 3px;
+  height: 40px;
+  padding-bottom: 10px;
 }
 #galerie nav::after {
   background-color: var(--white);
 }
 #galerie nav p {
   position: relative;
+  font-size: var(--police-small);
   margin-left: 52%;
   color: var(--white);
 }
@@ -191,7 +193,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--margin);
-  margin: 0 0 0 20%;
   padding-top: var(--margin);
   width: 100%;
   max-height: 100dvh;
@@ -200,7 +201,7 @@ a {
 }
 #galerie content .projet {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: 0;
   padding-top: var(--margin);
   padding-bottom: var(--margin);
@@ -214,6 +215,9 @@ a {
   flex-direction: column;
   gap: calc(var(--margin) / 2);
   width: 35%;
+}
+#galerie content .projet aside h2 {
+  font-size: var(--police-small);
 }
 #galerie content .projet aside .titre, #galerie content .projet aside .domaine, #galerie content .projet aside .outils {
   display: flex;
@@ -247,6 +251,7 @@ a {
 }
 #galerie content .projet .items-galerie .item p {
   padding-top: 10px;
+  font-size: var(--police-small);
   text-align: center;
 }
 #galerie content .projet .items-galerie .item img, #galerie content .projet .items-galerie .item video {
