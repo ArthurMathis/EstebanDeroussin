@@ -55,7 +55,7 @@ body {
 
     width: 100%;
     //min-height: 25dvh;
-    height: 40%;
+    height: calc(50dvh - 1.5 * var(--margin));
 
     padding: calc(var(--margin) * 1.2) 0;
 
@@ -65,7 +65,7 @@ body {
         justify-content: space-between;
 
         width: 40%;
-        height: 400px;
+        height: 100%;
 
         & article{
             display: flex;

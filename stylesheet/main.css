@@ -37,7 +37,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 40%;
+  height: calc(50dvh - 1.5 * var(--margin));
   padding: calc(var(--margin) * 1.2) 0;
 }
 #menu_de_navigation .left {
@@ -45,7 +45,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  height: 400px;
+  height: 100%;
 }
 #menu_de_navigation .left article {
   display: flex;
