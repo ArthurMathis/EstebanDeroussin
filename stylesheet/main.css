@@ -8,8 +8,9 @@ body {
 #entete {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: var(--police-small);
   padding-bottom: 15px;
+  height: 50dvh;
 }
 #entete .entete_margin {
   width: 100dvw;
@@ -17,10 +18,10 @@ body {
 }
 #entete .section_logo {
   display: flex;
-  gap: 40px;
+  gap: calc(var(--margin) * 2);
 }
 #entete .section_logo img {
-  height: 380px;
+  height: calc(50dvh - 150px);
 }
 #entete .rectangle {
   width: 100%;
@@ -36,7 +37,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-height: 25dvh;
+  height: 40%;
   padding: calc(var(--margin) * 1.2) 0;
 }
 #menu_de_navigation .left {
@@ -135,74 +136,6 @@ body {
   align-self: start;
   height: 400px;
   object-fit: contain;
-}
-
-#developpement {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 100dvw;
-  height: 100dvh;
-  z-index: 20;
-  padding: 25%;
-  backdrop-filter: blur(20px);
-}
-#developpement.active {
-  display: flex;
-}
-#developpement .cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  min-width: 60%;
-  min-height: 60%;
-  z-index: 21;
-  padding: 10% 10% calc(10% + 50px) 10%;
-  background-color: var(--white);
-  border: 1px solid var(--black);
-}
-#developpement .cards h1 {
-  border-bottom: 1px solid var(--black);
-}
-#developpement #dev_notif_close_icon {
-  position: relative;
-  display: block;
-  width: calc(1.8 * var(--police-normal));
-  height: calc(1.8 * var(--police-normal));
-  border-radius: 50%;
-  will-change: border;
-  transform: translateX(500%);
-}
-#developpement #dev_notif_close_icon::before, #developpement #dev_notif_close_icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 80%;
-  height: 2px;
-  background-color: var(--black);
-  border-radius: 2px;
-}
-#developpement #dev_notif_close_icon::before {
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
-}
-#developpement #dev_notif_close_icon::after {
-  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-}
-#developpement #dev_notif_close_icon:hover {
-  border: 1px solid var(--black);
-}
-#developpement #dev_notif_close_icon:hover::before {
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
-}
-#developpement #dev_notif_close_icon:hover::after {
-  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
 
 #contact {
@@ -394,6 +327,74 @@ body {
 }
 #contact .recap-projet div p {
   font-size: var(--police-small);
+}
+
+#developpement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 20;
+  padding: 25%;
+  backdrop-filter: blur(20px);
+}
+#developpement.active {
+  display: flex;
+}
+#developpement .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  min-width: 60%;
+  min-height: 60%;
+  z-index: 21;
+  padding: 10% 10% calc(10% + 50px) 10%;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+#developpement .cards h1 {
+  border-bottom: 1px solid var(--black);
+}
+#developpement #dev_notif_close_icon {
+  position: relative;
+  display: block;
+  width: calc(1.8 * var(--police-normal));
+  height: calc(1.8 * var(--police-normal));
+  border-radius: 50%;
+  will-change: border;
+  transform: translateX(500%);
+}
+#developpement #dev_notif_close_icon::before, #developpement #dev_notif_close_icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 2px;
+}
+#developpement #dev_notif_close_icon::before {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+#developpement #dev_notif_close_icon::after {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+#developpement #dev_notif_close_icon:hover {
+  border: 1px solid var(--black);
+}
+#developpement #dev_notif_close_icon:hover::before {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+#developpement #dev_notif_close_icon:hover::after {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
 
 /*# sourceMappingURL=main.css.map */
