@@ -461,6 +461,15 @@ body {
     }
 }
 
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(180%);
+    }
+}
+
 #preview {
     display: flex;
 
@@ -484,11 +493,14 @@ body {
             justify-content: space-between;
             align-items: center;
 
-            width: 45%;
+            width: 40%;
 
-            padding: calc(var(--margin) / 4) 0;
+            overflow: hidden;
+
+            padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
 
             & span {
+                position: relative;
                 display: block;
                 width: calc(var(--margin) / 2);
                 height: 2px;
@@ -519,6 +531,10 @@ body {
                 &::after {
                     transform: translateY(-50%) rotate(-45deg);
                 }
+            }
+
+            &:hover span {
+                animation: slide-in-right 1s infinite;
             }
         }
 
@@ -602,12 +618,6 @@ body {
                 transition: color ease 250ms, background-color ease 250ms;
                 will-change: color, background-color;
             }
-
-            /*
-            & .titre, & .domaine{
-                mix-blend-mode: difference;
-            }
-            */
         }
 
         & .black-font {

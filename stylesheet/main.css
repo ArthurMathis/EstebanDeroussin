@@ -342,6 +342,14 @@ body {
   opacity: 0.5;
 }
 
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(180%);
+  }
+}
 #preview {
   display: flex;
   width: 100%;
@@ -362,10 +370,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
-  padding: calc(var(--margin) / 4) 0;
+  width: 40%;
+  overflow: hidden;
+  padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
 }
 #preview aside .learn-link span {
+  position: relative;
   display: block;
   width: calc(var(--margin) / 2);
   height: 2px;
@@ -390,6 +400,9 @@ body {
 #preview aside .learn-link span::after {
   transform: translateY(-50%) rotate(-45deg);
 }
+#preview aside .learn-link:hover span {
+  animation: slide-in-right 1s infinite;
+}
 #preview aside .projet-liste {
   display: flex;
   justify-content: space-between;
@@ -410,11 +423,6 @@ body {
   width: 100%;
   height: calc(100vh - 67px);
   scroll-snap-align: start;
-  /*
-  & .titre, & .domaine{
-      mix-blend-mode: difference;
-  }
-  */
 }
 #preview main .projet img, #preview main .projet video {
   width: 100%;
