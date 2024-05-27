@@ -144,6 +144,133 @@ body {
   object-fit: contain;
 }
 
+#preview {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 67px);
+}
+#preview aside {
+  position: sticky;
+  top: 67px;
+  width: 35%;
+  height: 100%;
+}
+#preview aside h1 {
+  margin: var(--margin) 0 calc(2 * var(--margin));
+  font-size: var(--police-extra-big);
+  line-height: 120px;
+}
+#preview aside .learn-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  overflow: hidden;
+  padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
+}
+#preview aside .learn-link span {
+  position: relative;
+  display: block;
+  width: calc(var(--margin) / 2);
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 1px;
+}
+#preview aside .learn-link span::before, #preview aside .learn-link span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: calc(var(--margin) / 3);
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 1px;
+  transform: translateY(-50%);
+  transform-origin: right;
+}
+#preview aside .learn-link span::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+#preview aside .learn-link span::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+#preview aside .learn-link:hover span {
+  animation: slide-in-right 1s infinite;
+}
+#preview aside .projet-liste {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 80px;
+  margin-left: 45%;
+}
+#preview aside .projet-liste ul li.active {
+  color: var(--ligth-black);
+}
+#preview main {
+  position: absolute;
+  left: 35%;
+  top: 0;
+  height: calc(100vh - 67px);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  width: calc(65% + var(--margin));
+}
+#preview main .projet {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 67px);
+  scroll-snap-align: start;
+}
+#preview main .projet img, #preview main .projet video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#preview main .projet .titre {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--white);
+  font-size: var(--police-small);
+  transform: translateX(var(--police-small));
+  margin-left: 5px;
+}
+#preview main .projet .titre::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  display: block;
+  width: var(--police-extra-small);
+  height: var(--police-extra-small);
+  background-color: var(--white);
+  border-radius: 50%;
+  transform: translateX(calc(-1 * var(--police-small))) translateY(3px);
+}
+#preview main .projet .domaine {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: fit-content;
+  font-family: "Supply";
+  font-weight: 200;
+  font-size: var(--police-extra-small);
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 2px;
+  padding: 8px;
+  transition: color ease 250ms, background-color ease 250ms;
+  will-change: color, background-color;
+}
+#preview main .black-font .titre, #preview main .black-font .domaine {
+  color: var(--black);
+  border-color: var(--black);
+}
+#preview main .black-font .titre::before, #preview main .black-font .domaine::before {
+  background-color: var(--black);
+}
+
 #contact {
   display: flex;
   width: 100%;
@@ -350,128 +477,6 @@ body {
     transform: translateX(180%);
   }
 }
-#preview {
-  display: flex;
-  width: 100%;
-  height: calc(100vh - 67px);
-}
-#preview aside {
-  position: sticky;
-  top: 67px;
-  width: 35%;
-  height: 100%;
-}
-#preview aside h1 {
-  margin: var(--margin) 0 calc(2 * var(--margin));
-  font-size: var(--police-extra-big);
-  line-height: 120px;
-}
-#preview aside .learn-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%;
-  overflow: hidden;
-  padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
-}
-#preview aside .learn-link span {
-  position: relative;
-  display: block;
-  width: calc(var(--margin) / 2);
-  height: 2px;
-  background-color: var(--black);
-  border-radius: 1px;
-}
-#preview aside .learn-link span::before, #preview aside .learn-link span::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: calc(var(--margin) / 3);
-  height: 2px;
-  background-color: var(--black);
-  border-radius: 1px;
-  transform: translateY(-50%);
-  transform-origin: right;
-}
-#preview aside .learn-link span::before {
-  transform: translateY(-50%) rotate(45deg);
-}
-#preview aside .learn-link span::after {
-  transform: translateY(-50%) rotate(-45deg);
-}
-#preview aside .learn-link:hover span {
-  animation: slide-in-right 1s infinite;
-}
-#preview aside .projet-liste {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  margin-top: 80px;
-  margin-left: 45%;
-}
-#preview aside .projet-liste ul li.active {
-  color: var(--ligth-black);
-}
-#preview main {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  width: 65%;
-}
-#preview main .projet {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 67px);
-  scroll-snap-align: start;
-}
-#preview main .projet img, #preview main .projet video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#preview main .projet .titre {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: var(--white);
-  font-size: var(--police-small);
-  transform: translateX(var(--police-small));
-  margin-left: 5px;
-}
-#preview main .projet .titre::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  display: block;
-  width: var(--police-extra-small);
-  height: var(--police-extra-small);
-  background-color: var(--white);
-  border-radius: 50%;
-  transform: translateX(calc(-1 * var(--police-small))) translateY(3px);
-}
-#preview main .projet .domaine {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: fit-content;
-  font-family: "Supply";
-  font-weight: 200;
-  font-size: var(--police-extra-small);
-  color: var(--white);
-  border: 1px solid var(--white);
-  border-radius: 2px;
-  padding: 8px;
-  transition: color ease 250ms, background-color ease 250ms;
-  will-change: color, background-color;
-}
-#preview main .black-font .titre, #preview main .black-font .domaine {
-  color: var(--black);
-  border-color: var(--black);
-}
-#preview main .black-font .titre::before, #preview main .black-font .domaine::before {
-  background-color: var(--black);
-}
-
 #developpement {
   position: fixed;
   top: 0;
