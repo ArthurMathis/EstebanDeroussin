@@ -161,7 +161,7 @@ body {
   font-size: var(--police-extra-big);
   line-height: 120px;
 }
-#preview aside .learn-link {
+#preview aside #learn-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +169,7 @@ body {
   overflow: hidden;
   padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
 }
-#preview aside .learn-link span {
+#preview aside #learn-link span {
   position: relative;
   display: block;
   width: calc(var(--margin) / 2);
@@ -177,7 +177,7 @@ body {
   background-color: var(--black);
   border-radius: 1px;
 }
-#preview aside .learn-link span::before, #preview aside .learn-link span::after {
+#preview aside #learn-link span::before, #preview aside #learn-link span::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -189,13 +189,13 @@ body {
   transform: translateY(-50%);
   transform-origin: right;
 }
-#preview aside .learn-link span::before {
+#preview aside #learn-link span::before {
   transform: translateY(-50%) rotate(45deg);
 }
-#preview aside .learn-link span::after {
+#preview aside #learn-link span::after {
   transform: translateY(-50%) rotate(-45deg);
 }
-#preview aside .learn-link:hover span {
+#preview aside #learn-link:hover span {
   animation: slide-in-right 1s infinite;
 }
 #preview aside .projet-liste {
