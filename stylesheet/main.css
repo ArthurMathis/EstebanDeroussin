@@ -74,10 +74,6 @@ body {
 #menu_de_navigation .left article nav > a:hover {
   color: var(--white);
   background-color: var(--black);
-  /*
-  color: var(--white);
-  box-shadow: inset 0 -40px 0 0 var(--black);
-  */
 }
 #menu_de_navigation .left div {
   display: flex;
@@ -120,12 +116,13 @@ body {
   padding: calc(var(--margin) / 2) 0;
 }
 #about_me p {
+  margin-left: 5px;
   transform: translateX(var(--police-small));
 }
 #about_me p::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -5px;
   display: block;
   width: var(--police-extra-small);
   height: var(--police-extra-small);
@@ -170,13 +167,14 @@ body {
   width: 100%;
 }
 #contact .réseaux content p {
+  margin-left: 5px;
   font-size: var(--police-small);
   transform: translateX(var(--police-small));
 }
 #contact .réseaux content p::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -5px;
   display: block;
   width: var(--police-extra-small);
   height: var(--police-extra-small);
@@ -342,6 +340,75 @@ body {
 }
 #contact .recap-projet div a:hover {
   opacity: 0.5;
+}
+
+#preview {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 67px);
+}
+#preview aside {
+  position: sticky;
+  top: 67px;
+  width: 35%;
+  height: 100%;
+  background-color: red;
+}
+#preview main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  width: 65%;
+}
+#preview main .projet {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 67px);
+  scroll-snap-align: start;
+  /*
+  & .titre, & .domaine{
+      mix-blend-mode: difference;
+  }
+  */
+}
+#preview main .projet img, #preview main .projet video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#preview main .projet .titre {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--white);
+  font-size: var(--police-small);
+  transform: translateX(var(--police-small));
+  margin-left: 5px;
+}
+#preview main .projet .titre::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  display: block;
+  width: var(--police-extra-small);
+  height: var(--police-extra-small);
+  background-color: var(--white);
+  border-radius: 50%;
+  transform: translateX(calc(-1 * var(--police-small))) translateY(3px);
+}
+#preview main .projet .domaine {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: fit-content;
+  font-family: "Supply";
+  font-weight: 200;
+  font-size: var(--police-extra-small);
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 2px;
+  padding: 8px;
+  transition: color ease 250ms, background-color ease 250ms;
+  will-change: color, background-color;
 }
 
 #developpement {
