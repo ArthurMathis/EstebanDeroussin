@@ -210,6 +210,9 @@ a {
   bottom: 100%;
   background-color: var(--white);
 }
+#galerie content .projet.active aside .domaine::after, #galerie content .projet.active aside .outils::after {
+  transform: scaleX(1);
+}
 #galerie content .projet aside {
   display: flex;
   flex-direction: column;
@@ -228,10 +231,21 @@ a {
   font-size: var(--police-normal);
 }
 #galerie content .projet aside .domaine, #galerie content .projet aside .outils {
+  position: relative;
   padding-bottom: calc(var(--margin) / 4);
 }
 #galerie content .projet aside .domaine::after, #galerie content .projet aside .outils::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
   background-color: var(--white);
+  transform: scaleX(0);
+  will-change: transform;
+  transform-origin: left;
+  overflow-x: hidden;
+  transition: transform 850ms ease-in-out;
 }
 #galerie content .projet aside .domaine h2:first-child, #galerie content .projet aside .outils h2:first-child {
   width: 15%;

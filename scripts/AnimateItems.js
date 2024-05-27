@@ -1,4 +1,4 @@
-class AnimateLignes{
+class AnimateItems{
     constructor(selector){
         inView.threshold(0.2);
         inView(selector)

@@ -19,14 +19,17 @@ inView('.rectangle').on('enter', function(c){
     // Ajout d'une pause de 600ms (durée de l'animation du rectangle) avant d'ajouter les lignes
     setTimeout(() => {
         // Ajout des lignes dynamiques
-        const lignes = new AnimateLignes('.lignes');
+        // const lignes = new AnimateLignes('.lignes');
+        const lignes = new AnimateItems('.lignes');
 
         // Ajout d'une pause supplémentaire de 250ms (850ms - 600ms) avant d'ajouter les textes
         setTimeout(() => {
-            const texts = new AnimateParagraphe('.fade-in');
+            // const texts = new AnimateParagraphe('.fade-in');
+            const texts = new AnimateItems('.fade-in');
 
             setTimeout(() => {
-                const texts = new AnimateParagraphe('.opacity');
+                // const texts = new AnimateParagraphe('.opacity');
+                const texts = new AnimateItems('.opacity');
                 document.body.style.overflow = 'auto';
             }, 600);
         }, 850);
