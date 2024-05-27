@@ -134,7 +134,7 @@ body {
         & h1{
             text-align: right;
             font-weight: var(--police-weigth-big);
-            font-size: var(--police-extrabig);
+            font-size: calc(var(--police-big) * 1.2);
             line-height: 87px;
 
             transform: translateY(calc(-1 * var(--margin)));
