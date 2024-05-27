@@ -60,8 +60,6 @@ const observerOptions = { attributes: true };
 // Commence à observer les changements de style sur le corps de la page
 observer.observe(body, observerOptions);
 
-
-
 // Gestion de la preview
 const learnLink = document.getElementById('learn-link');
 const preview = document.getElementById('preview');
@@ -122,3 +120,24 @@ const observerProjets = new IntersectionObserver((entries) => {
 projets.forEach(projet => {
     observerProjets.observe(projet);
 });
+
+let isBlocked = false;
+window.addEventListener('scroll', function() {
+    const previewElement = document.getElementById('preview');
+    const previewTop = previewElement.getBoundingClientRect().top;
+
+    if (previewTop < 70) {
+        // On empêche le défilement
+        document.body.style.overflow = 'hidden'; 
+        // On aligne la preview
+        const yPosition = preview.getBoundingClientRect().top + window.scrollY - 68;
+        window.scrollTo(0, yPosition);
+        isBlocked = true;
+
+    } else {
+        // On libère le défilement
+        document.body.style.overflow = 'auto'; // Permet le défilement
+        isBlocked = false;
+    }
+}); 
+
