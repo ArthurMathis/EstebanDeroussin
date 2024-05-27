@@ -352,7 +352,53 @@ body {
   top: 67px;
   width: 35%;
   height: 100%;
-  background-color: red;
+}
+#preview aside h1 {
+  margin: var(--margin) 0 calc(2 * var(--margin));
+  font-size: var(--police-extra-big);
+  line-height: 120px;
+}
+#preview aside .learn-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  padding: calc(var(--margin) / 4) 0;
+}
+#preview aside .learn-link span {
+  display: block;
+  width: calc(var(--margin) / 2);
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 1px;
+}
+#preview aside .learn-link span::before, #preview aside .learn-link span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: calc(var(--margin) / 3);
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 1px;
+  transform: translateY(-50%);
+  transform-origin: right;
+}
+#preview aside .learn-link span::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+#preview aside .learn-link span::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+#preview aside .projet-liste {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 80px;
+  margin-left: 45%;
+}
+#preview aside .projet-liste ul li.active {
+  color: var(--ligth-black);
 }
 #preview main {
   scroll-snap-type: y mandatory;
@@ -409,6 +455,13 @@ body {
   padding: 8px;
   transition: color ease 250ms, background-color ease 250ms;
   will-change: color, background-color;
+}
+#preview main .black-font .titre, #preview main .black-font .domaine {
+  color: var(--black);
+  border-color: var(--black);
+}
+#preview main .black-font .titre::before, #preview main .black-font .domaine::before {
+  background-color: var(--black);
 }
 
 #developpement {

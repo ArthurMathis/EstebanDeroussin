@@ -473,7 +473,68 @@ body {
         width: 35%;
         height: 100%;
 
-        background-color: red;
+        & h1 {
+            margin: var(--margin) 0 calc(2 * var(--margin));
+            font-size: var(--police-extra-big);
+            line-height: 120px;
+        }
+
+        & .learn-link{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 45%;
+
+            padding: calc(var(--margin) / 4) 0;
+
+            & span {
+                display: block;
+                width: calc(var(--margin) / 2);
+                height: 2px;
+
+                background-color: var(--black);
+                border-radius: 1px;
+
+                &::before, &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+
+                    width: calc(var(--margin) / 3);
+                    height: 2px;
+
+                    background-color: var(--black);
+                    border-radius: 1px;
+
+                    transform: translateY(-50%);
+                    transform-origin: right;
+                }
+
+                &::before {
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                &::after {
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
+
+        & .projet-liste{
+            display: flex;
+            justify-content: space-between;
+
+            width: 50%;
+
+            margin-top: 80px;
+            margin-left: 45%;
+
+            & ul li.active {
+                color: var(--ligth-black);
+            }
+        }
     }
 
     & main{
@@ -547,6 +608,17 @@ body {
                 mix-blend-mode: difference;
             }
             */
+        }
+
+        & .black-font {
+            & .titre, & .domaine{ 
+                color: var(--black); 
+                border-color: var(--black);
+                
+                &::before {
+                   background-color: var(--black);
+                }
+            }
         }
     }
 }

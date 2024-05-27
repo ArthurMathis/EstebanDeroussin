@@ -11,7 +11,7 @@
   src: url("../assets/typo/Supply/PPSupplySans-Ultralight.otf");
 }
 :root {
-  --police-extrabig: 96px;
+  --police-extra-big: 142px;
   --police-big: 90px;
   --police-normal: 18px;
   --police-small: 15px;
