@@ -60,6 +60,8 @@ const observerOptions = { attributes: true };
 // Commence à observer les changements de style sur le corps de la page
 observer.observe(body, observerOptions);
 
+
+
 // Gestion de la preview
 const learnLink = document.getElementById('learn-link');
 const preview = document.getElementById('preview');
@@ -68,8 +70,49 @@ const intitule = preview.querySelectorAll('.projet-liste ul li');
 
 console.log(intitule);
 
-// Utilisation de l'API Intersection Observer pour détecter la visibilité de chaque projet dans le tableau projets
+// On bloque le défilement de la page
+let isBlocked = false;
+window.addEventListener('scroll', function() {
+    const previewElement = document.getElementById('preview');
+    const previewTop = previewElement.getBoundingClientRect().top;
+
+    if (previewTop < 70) {
+        // On empêche le défilement
+        document.body.style.overflow = 'hidden'; 
+        // On aligne la preview
+        const yPosition = preview.getBoundingClientRect().top + window.scrollY - 68;
+        window.scrollTo(0, yPosition);
+        isBlocked = true;
+
+    } else {
+        // On libère le défilement
+        document.body.style.overflow = 'auto'; // Permet le défilement
+        isBlocked = false;
+    }
+}); 
+
+// On gère la libération du scroll
+let isFirstVisible;
+let isLastVisible;
+
+preview.addEventListener('wheel', function(e) {
+    const deltaY = e.deltaY;
+    if (deltaY < 0 && isFirstVisible) {
+        // Libération du défilement si on scrolle vers le haut et que le premier projet est visible
+        document.body.style.overflow = 'auto';
+        isBlocked = false;
+
+    } else if (deltaY > 0 && isLastVisible) {
+        // Libération du défilement si on scrolle vers le bas et que le dernier projet est visible
+        document.body.style.overflow = 'auto';
+        isBlocked = false;
+    }
+});
+
+// On détecte quel élément est visible
 const observerProjets = new IntersectionObserver((entries) => {
+    isFirstVisible = false;
+    isLastVisible = false;
     entries.forEach(entry => {
         // On retire la classe 'active' de tous les éléments sauf celui correspondant à l'entrée actuelle
         intitule.forEach(item => {
@@ -80,6 +123,15 @@ const observerProjets = new IntersectionObserver((entries) => {
 
         if (entry.isIntersecting) {
             const index = Array.from(projets).indexOf(entry.target);
+
+            // Mise à jour de la visibilité pour le premier et le dernier projet
+            if (index === 0 && entry.isIntersecting) {
+                isFirstVisible = true;
+            }
+            if (index === projets.length - 1 && entry.isIntersecting) {
+                isLastVisible = true;
+            }
+
             intitule[index].classList.add('active');
             switch (index) {
                 case 0:
@@ -103,11 +155,6 @@ const observerProjets = new IntersectionObserver((entries) => {
                 case 6:
                     learnLink.href = "work.html#Louis-vuitton";
                     break;
-
-                default:
-                    // Traitement par défaut
-                    console.log(`Erreur de détection`);
-                    break;
             }
         }
     });
@@ -120,24 +167,3 @@ const observerProjets = new IntersectionObserver((entries) => {
 projets.forEach(projet => {
     observerProjets.observe(projet);
 });
-
-let isBlocked = false;
-window.addEventListener('scroll', function() {
-    const previewElement = document.getElementById('preview');
-    const previewTop = previewElement.getBoundingClientRect().top;
-
-    if (previewTop < 70) {
-        // On empêche le défilement
-        document.body.style.overflow = 'hidden'; 
-        // On aligne la preview
-        const yPosition = preview.getBoundingClientRect().top + window.scrollY - 68;
-        window.scrollTo(0, yPosition);
-        isBlocked = true;
-
-    } else {
-        // On libère le défilement
-        document.body.style.overflow = 'auto'; // Permet le défilement
-        isBlocked = false;
-    }
-}); 
-
