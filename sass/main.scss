@@ -111,15 +111,19 @@ body {
                 font-size: var(--police-small);
             } 
 
-            & ul a{
-                font-size: var(--police-small);
+            & ul li {
+                line-height: 16px;
 
-                will-change: opacity;
-                transition: ease 200ms opacity;
-        
-                &:hover{
-                    opacity: 0.5;
-                }   
+                & a{
+                    font-size: var(--police-small);
+
+                    will-change: opacity;
+                    transition: ease 200ms opacity;
+                    
+                    &:hover{
+                        opacity: 0.5;
+                    } 
+                }  
             }
         }
     }
@@ -221,9 +225,13 @@ body {
 
             width: 40%;
 
+            padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
+
             overflow: hidden;
 
-            padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
+            & p {
+                font-size: var(--police-small);
+            }
 
             & span {
                 position: relative;
@@ -273,8 +281,16 @@ body {
             margin-top: 80px;
             margin-left: 45%;
 
-            & ul li.active {
-                color: var(--ligth-black);
+            & p {
+                font-size: var(--police-small);
+            }
+
+            & ul li {
+                font-size: var(--police-small);
+
+                &.active {
+                    color: var(--ligth-black);
+                }
             }
         }
     }

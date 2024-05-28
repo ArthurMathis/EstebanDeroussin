@@ -62,54 +62,8 @@ observer.observe(body, observerOptions);
 
 
 
+
 // Gestion de la preview
-const learnLink = document.getElementById('learn-link');
-const preview = document.getElementById('preview');
-const projets = preview.querySelectorAll('main .projet');
-const intitule = preview.querySelectorAll('.projet-liste ul li');
-
-console.log(intitule);
-
-// On bloque le défilement de la page
-let isBlocked = false;
-window.addEventListener('scroll', function() {
-    const previewElement = document.getElementById('preview');
-    const previewTop = previewElement.getBoundingClientRect().top;
-
-    if (previewTop < 70) {
-        // On empêche le défilement
-        document.body.style.overflow = 'hidden'; 
-        // On aligne la preview
-        const yPosition = preview.getBoundingClientRect().top + window.scrollY - 68;
-        window.scrollTo(0, yPosition);
-        isBlocked = true;
-
-    } else {
-        // On libère le défilement
-        document.body.style.overflow = 'auto'; // Permet le défilement
-        isBlocked = false;
-    }
-}); 
-
-// On gère la libération du scroll
-let isFirstVisible;
-let isLastVisible;
-
-preview.addEventListener('wheel', function(e) {
-    const deltaY = e.deltaY;
-    if (deltaY < 0 && isFirstVisible) {
-        // Libération du défilement si on scrolle vers le haut et que le premier projet est visible
-        document.body.style.overflow = 'auto';
-        isBlocked = false;
-
-    } else if (deltaY > 0 && isLastVisible) {
-        // Libération du défilement si on scrolle vers le bas et que le dernier projet est visible
-        document.body.style.overflow = 'auto';
-        isBlocked = false;
-    }
-});
-
-// On détecte quel élément est visible
 const observerProjets = new IntersectionObserver((entries) => {
     isFirstVisible = false;
     isLastVisible = false;

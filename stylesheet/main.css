@@ -83,12 +83,15 @@ body {
   width: 20%;
   font-size: var(--police-small);
 }
-#menu_de_navigation .left div ul a {
+#menu_de_navigation .left div ul li {
+  line-height: 16px;
+}
+#menu_de_navigation .left div ul li a {
   font-size: var(--police-small);
   will-change: opacity;
   transition: ease 200ms opacity;
 }
-#menu_de_navigation .left div ul a:hover {
+#menu_de_navigation .left div ul li a:hover {
   opacity: 0.5;
 }
 #menu_de_navigation .right {
@@ -166,8 +169,11 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 40%;
-  overflow: hidden;
   padding: calc(var(--margin) / 4) 5px calc(var(--margin) / 4) 0;
+  overflow: hidden;
+}
+#preview aside #learn-link p {
+  font-size: var(--police-small);
 }
 #preview aside #learn-link span {
   position: relative;
@@ -204,6 +210,12 @@ body {
   width: 50%;
   margin-top: 80px;
   margin-left: 45%;
+}
+#preview aside .projet-liste p {
+  font-size: var(--police-small);
+}
+#preview aside .projet-liste ul li {
+  font-size: var(--police-small);
 }
 #preview aside .projet-liste ul li.active {
   color: var(--ligth-black);
