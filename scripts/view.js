@@ -61,9 +61,25 @@ const observerOptions = { attributes: true };
 observer.observe(body, observerOptions);
 
 
-
-
 // Gestion de la preview
+const learnLink = document.getElementById('learn-link');
+const preview = document.getElementById('preview');
+const projets = preview.querySelectorAll('main .projet');
+const intitule = preview.querySelectorAll('.projet-liste ul li');
+
+// Initialisation du contrôleur ScrollMagic
+var controller = new ScrollMagic.Controller();
+
+// Création d'une scène pour la section #preview
+var scene = new ScrollMagic.Scene({
+    triggerElement: "#preview", // Élément déclencheur
+    triggerHook: 0, // Déclenchement lorsque le haut de l'élément atteint le haut de la fenêtre
+    offset: -68, // Ajustez cette valeur à la hauteur de votre barre de navigation
+    duration: '35%' // Durée pendant laquelle l'élément reste épinglé (peut être ajustée)
+})
+.setPin("#preview") // Fixe l'élément #preview en place
+.addTo(controller); // Ajoute la scène au contrôleur
+
 const observerProjets = new IntersectionObserver((entries) => {
     isFirstVisible = false;
     isLastVisible = false;
@@ -121,3 +137,6 @@ const observerProjets = new IntersectionObserver((entries) => {
 projets.forEach(projet => {
     observerProjets.observe(projet);
 });
+
+const preview_slider = new scrollSlider('#preview main .projet', '#projet-puce li');
+preview_slider.init();
