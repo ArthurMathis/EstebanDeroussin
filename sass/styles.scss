@@ -49,6 +49,42 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+@keyframes slide-in-vertical {
+    0% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(150%);
+    }
+}
+
+@keyframes HoverLignes {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes Open-Web-App {
+    from {
+        
+    }
+    to {
+
+    }
+}
+
 body{
     overflow-x: hidden;
 }
@@ -84,6 +120,31 @@ a {
 
         backdrop-filter: blur(11px);
         transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
+    }
+
+    & > span {
+        position: absolute;
+        bottom: 0;
+
+        width: 1px;
+        height: calc(var(--margin) / 4);
+
+        background-color: var(--black);
+
+        transform: translateY(100%) scaleX(0);
+
+        &:first-of-type {
+            left: 0;
+        }
+
+        &:last-of-type {
+            animation-delay : 1950ms;
+            right: 0;
+        }
+    }
+
+    &.active > span {
+        animation: scaleY 450ms forwards;
     }
 
     & p {
@@ -151,6 +212,14 @@ a {
         & img{
             height: var(--police-normal);
         }
+    }
+}
+
+@keyframes scaleY{
+    from{
+        transform: translateY(100%) scaleX(0);
+    }to{
+        transform: translateY(100%) scaleX(1);
     }
 }
 
@@ -259,8 +328,7 @@ a {
             padding-bottom: var(--margin);
 
             &::after{
-                bottom: 100%;
-                background-color: var(--white);
+                display: none;
             }
 
             &.active aside{

@@ -17,7 +17,6 @@ inView('.rectangle').on('enter', function(c){
 // Ajout d'une pause de 600ms (durée de l'animation du rectangle) avant d'ajouter les lignes
 setTimeout(() => {
     // Ajout des lignes dynamiques
-    // const lignes = new AnimateLignes('.lignes');
     const lignes = new AnimateItems('.lignes');
 }, 600);
 // Ajout d'une pause supplémentaire de 250ms (850ms - 600ms) avant d'ajouter les textes
@@ -26,11 +25,10 @@ setTimeout(() => {
     const texts = new AnimateItems('.fade-in');
 }, 600 + 850);
 setTimeout(() => {
-    // const texts = new AnimateParagraphe('.opacity');
+    // Ajout des animations de textes
     const texts = new AnimateItems('.opacity');
     document.body.style.overflow = 'auto';
 }, 600 + 850 + 600);
-
 
 
 // Ajout de l'effet parallax sur les images portant la classe parallax
@@ -75,7 +73,7 @@ var scene = new ScrollMagic.Scene({
     triggerElement: "#preview", // Élément déclencheur
     triggerHook: 0, // Déclenchement lorsque le haut de l'élément atteint le haut de la fenêtre
     offset: -68, // Ajustez cette valeur à la hauteur de votre barre de navigation
-    duration: '35%' // Durée pendant laquelle l'élément reste épinglé (peut être ajustée)
+    duration: '55%' // Durée pendant laquelle l'élément reste épinglé (peut être ajustée)
 })
 .setPin("#preview") // Fixe l'élément #preview en place
 .addTo(controller); // Ajoute la scène au contrôleur
@@ -138,5 +136,7 @@ projets.forEach(projet => {
     observerProjets.observe(projet);
 });
 
+
+// Ajout du Slider (Preview)
 const preview_slider = new scrollSlider('#preview main .projet', '#projet-puce li');
 preview_slider.init();

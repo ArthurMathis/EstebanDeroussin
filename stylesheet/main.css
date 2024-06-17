@@ -9,8 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--police-small);
-  padding-bottom: 15px;
   height: 50dvh;
+  padding-bottom: 15px;
 }
 #entete .entete_margin {
   width: 100dvw;
@@ -107,9 +107,44 @@ body {
   line-height: 87px;
   transform: translateY(calc(-1 * var(--margin)));
 }
-#menu_de_navigation .right p {
+#menu_de_navigation .right div {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: calc(var(--margin) * 2 / 3);
+  height: var(--police-normal);
+  overflow: hidden;
+}
+#menu_de_navigation .right div p {
   text-align: right;
   font-size: var(--police-small);
+}
+#menu_de_navigation .right div span {
+  position: relative;
+  display: block;
+  width: 2px;
+  height: calc(var(--margin) / 2);
+  margin-right: calc(var(--margin) / 2);
+  border-radius: 1px;
+  background-color: var(--black);
+  animation: slide-in-vertical 1750ms ease infinite;
+}
+#menu_de_navigation .right div span::before, #menu_de_navigation .right div span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 2px;
+  height: calc(var(--margin) / 3);
+  border-radius: 1px;
+  background-color: var(--black);
+  transform-origin: bottom;
+}
+#menu_de_navigation .right div span::before {
+  transform: translateX(-50%) rotate(45deg);
+}
+#menu_de_navigation .right div span::after {
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 #about_me {
@@ -151,11 +186,10 @@ body {
   position: relative;
   display: flex;
   width: 100%;
-  height: calc(100vh - 67px);
+  height: calc(100vh - 68px);
 }
 #preview aside {
-  position: sticky;
-  top: 67px;
+  position: relative;
   width: 35%;
   height: 100%;
 }
@@ -175,15 +209,24 @@ body {
 #preview aside #learn-link p {
   font-size: var(--police-small);
 }
-#preview aside #learn-link span {
+#preview aside #learn-link > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--margin) * 2 / 3);
+  height: calc(var(--margin) / 2);
+  overflow: hidden;
+}
+#preview aside #learn-link > div span {
   position: relative;
   display: block;
   width: calc(var(--margin) / 2);
   height: 2px;
   background-color: var(--black);
   border-radius: 1px;
+  animation: slide-in-right 1750ms ease-in infinite;
 }
-#preview aside #learn-link span::before, #preview aside #learn-link span::after {
+#preview aside #learn-link > div span::before, #preview aside #learn-link > div span::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -195,14 +238,14 @@ body {
   transform: translateY(-50%);
   transform-origin: right;
 }
-#preview aside #learn-link span::before {
+#preview aside #learn-link > div span::before {
   transform: translateY(-50%) rotate(45deg);
 }
-#preview aside #learn-link span::after {
+#preview aside #learn-link > div span::after {
   transform: translateY(-50%) rotate(-45deg);
 }
-#preview aside #learn-link:hover span {
-  animation: slide-in-right 1s infinite;
+#preview aside #learn-link:hover::after {
+  animation: HoverLignes 450ms ease-in-out forwards;
 }
 #preview aside .projet-liste {
   display: flex;
@@ -221,19 +264,21 @@ body {
   color: var(--ligth-black);
 }
 #preview main {
-  position: absolute;
   left: 35%;
   top: 0;
-  height: calc(100vh - 67px);
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  display: flex;
   width: calc(65% + var(--margin));
+  height: calc(100vh - 67px);
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 #preview main .projet {
   position: relative;
-  width: 100%;
+  flex: 0 0 100%;
   height: calc(100vh - 67px);
   scroll-snap-align: start;
+  opacity: 1;
 }
 #preview main .projet img, #preview main .projet video {
   width: 100%;
@@ -272,8 +317,14 @@ body {
   border: 1px solid var(--white);
   border-radius: 2px;
   padding: 8px;
-  transition: color ease 250ms, background-color ease 250ms;
-  will-change: color, background-color;
+}
+#preview main .projet .domaine, #preview main .projet .titre {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 800ms ease-in-out;
+}
+#preview main .projet.active .domaine, #preview main .projet.active .titre {
+  opacity: 1;
 }
 #preview main .black-font .titre, #preview main .black-font .domaine {
   color: var(--black);
@@ -282,13 +333,44 @@ body {
 #preview main .black-font .titre::before, #preview main .black-font .domaine::before {
   background-color: var(--black);
 }
+#preview #projet-puce {
+  position: absolute;
+  bottom: 8%;
+  left: 63%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--margin) * 2 / 3);
+  width: fit-content;
+  height: fit-content;
+  z-index: 10;
+}
+#preview #projet-puce li {
+  width: var(--police-extra-small);
+  height: var(--police-extra-small);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+#preview #projet-puce li.active {
+  background-color: var(--white);
+}
 
 #contact {
+  position: relative;
   display: flex;
   width: 100%;
   height: calc(100dvh - 105px);
 }
+#contact .réseaux > span, #contact .coordonnees > span {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: calc(var(--margin) / 4);
+  background-color: var(--black);
+}
 #contact .réseaux {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -296,6 +378,9 @@ body {
   width: 42.5%;
   padding: var(--margin) 0;
   border-bottom: 1px solid var(--black);
+}
+#contact .réseaux > span {
+  left: 0;
 }
 #contact .réseaux img {
   width: 80%;
@@ -346,12 +431,16 @@ body {
   transform: scaleX(1);
 }
 #contact .coordonnees {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 37.5%;
   height: 100%;
   border-bottom: 1px solid var(--black);
+}
+#contact .coordonnees > span {
+  right: 0;
 }
 #contact .coordonnees article {
   max-height: 30%;
@@ -453,7 +542,6 @@ body {
 }
 #contact .coordonnees .developpeur .reseaux-arthur .item-reseau img {
   width: calc(3 * var(--police-small));
-  width: var(--police-normal);
 }
 #contact .recap-projet {
   display: flex;
@@ -481,14 +569,6 @@ body {
   opacity: 0.5;
 }
 
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(180%);
-  }
-}
 #developpement {
   position: fixed;
   top: 0;

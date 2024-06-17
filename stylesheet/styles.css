@@ -40,6 +40,30 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+@keyframes slide-in-vertical {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(150%);
+  }
+}
+@keyframes HoverLignes {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 body {
   overflow-x: hidden;
 }
@@ -69,6 +93,24 @@ a {
   height: 84px;
   backdrop-filter: blur(11px);
   transform: translateX(calc(-1 * var(--margin))) translateY(-12.5px);
+}
+#menu > span {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: calc(var(--margin) / 4);
+  background-color: var(--black);
+  transform: translateY(100%) scaleX(0);
+}
+#menu > span:first-of-type {
+  left: 0;
+}
+#menu > span:last-of-type {
+  animation-delay: 1950ms;
+  right: 0;
+}
+#menu.active > span {
+  animation: scaleY 450ms forwards;
 }
 #menu p {
   font-size: var(--police-small);
@@ -123,6 +165,14 @@ a {
   height: var(--police-normal);
 }
 
+@keyframes scaleY {
+  from {
+    transform: translateY(100%) scaleX(0);
+  }
+  to {
+    transform: translateY(100%) scaleX(1);
+  }
+}
 @keyframes apparition {
   from {
     opacity: 0;
@@ -207,8 +257,7 @@ a {
   padding-bottom: var(--margin);
 }
 #galerie content .projet::after {
-  bottom: 100%;
-  background-color: var(--white);
+  display: none;
 }
 #galerie content .projet.active aside .domaine::after, #galerie content .projet.active aside .outils::after {
   transform: scaleX(1);

@@ -7,17 +7,20 @@
     <title>Esteban Deroussin</title>
     <link rel="icon" href="assets/img/logo/logo_noir.png">
 
-    <link rel="stylesheet" href="stylesheet/lignes.css">
-    <link rel="stylesheet" href="stylesheet/AnimateParagraphe.css">
     <link rel="stylesheet" href="stylesheet/styles.css">
     <link rel="stylesheet" href="stylesheet/main.css">
+    <link rel="stylesheet" href="stylesheet/AnimateItems.css">
 
     <script src="scripts/in-view.min.js"></script>
     <script src="scripts/simpleParallax.js"></script>
     <script src="scripts/AnimateItems.js"></script>
+    <script src="scripts/ScrollMagic min.js"></script>
+    <script src="scripts/Sliders.js"></script>
 </head>
 <body>
     <nav id="menu" class="lignes">
+        <span></span>
+        <span></span>
         <section id="logo">
             <img src="assets/img/logo/logo_noir.png">
             <p>Graphic Designer</p>
@@ -67,7 +70,7 @@
                     <li class="fade-in"><a herf="#">02_Tapis Roulant</a></li>
                     <li class="fade-in"><a herf="#">03_Les Vielles Charrues</a></li>
                     <li class="fade-in"><a herf="#">04_Au delà de la Peur</a></li>
-                    <li class="fade-in"><a herf="#">05_Make Technologie</a></li>
+                    <li class="fade-in"><a herf="#">05_Meg Technologie</a></li>
                     <li class="fade-in"><a herf="#">06_Foire aux Oignons</a></li>
                     <li class="fade-in"><a herf="#">07_Louis Vuitton</a></li>
                 </ul>
@@ -78,7 +81,10 @@
                 <h1 class="opacity">Esteban_</h1>
                 <h1 class="opacity">GraphicDesigner</h1>
             </article>
-            <p class="fade-in">scroll pour découvrir !</p>
+            <div class="fade-in">
+                <p>scroll pour découvrir</p>
+                <span></span>
+            </div>
         </section>
     </div>
 
@@ -94,7 +100,9 @@
             <h1>Works Preview</h1>
             <a id="learn-link" class="lignes" href="#">
                 <p>Learn more</p>
-                <span></span>
+                <div>
+                    <span></span>
+                </div>
             </a>
             <div class="projet-liste">
                 <p>Project name:</p>
@@ -103,44 +111,53 @@
                     <li>02_Tapis Roulant</li>
                     <li>03_Les Vielles Charrues</li>
                     <li>04_Au delà de la Peur</li>
-                    <li>05_Make Technologie</li>
+                    <li>05_Meg Technologie</li>
                     <li>06_Foire aux Oignons</li>
                     <li>07_Louis Vuitton</li>
                 </ul>
             </div>
         </aside>
+        <ul id="projet-puce">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
         <main>
-            <div class="projet">
+            <div class="projet opacity">
                 <img src="assets/img/Vuelta/Gourle.jpg" alt="Illustration du projet">
                 <p class="titre">01_La Vuelta</p>
                 <p class="domaine">Branding & Motion Design</p>
             </div>
-            <div class="projet">
+            <div class="projet opacity">
                 <video src="assets/mov/Tapis roulant - Animation 3D.mov" autoplay muted loop></video>
                 <p class="titre">02_Tapis Roulant</p>
                 <p class="domaine">Motion Design & 3D</p>
             </div>
-            <div class="projet black-font">
+            <div class="projet opacity black-font">
                 <img src="assets/img/Les vielles charrues/Tickets Gratuits.jpg" alt="Illustration du projet">
                 <p class="titre">03_Les Vielles Charrues</p>
                 <p class="domaine">Branding</p>
             </div>
-            <div class="projet">
-                <img src="assets/img/Au delà de la Peur/Page de fin.jpg" alt="Illustration du projet">
+            <div class="projet opacity black-font">
+                <img src="assets/img/Au delà de la Peur/Shining.jpg" alt="Illustration du projet">
                 <p class="titre">04_Au delà de la peur</p>
                 <p class="domaine">Print & Photographie</p>
             </div>
-            <div class="projet black-font">
+            <div class="projet opacity black-font">
                 <img src="assets/img/Make Tech/WiFi.jpg" alt="Illustration du projet">
-                <p class="titre">05_Make Technologie</p>
+                <p class="titre">05_Meg Technologie</p>
                 <p class="domaine">Print & Photographie</p>
             </div>
-            <div class="projet black-font">
-                <img src="assets/img/Foire aux oignons/Zoomjpg.jpg" alt="Illustration du projet">
+            <div class="projet opacity black-font">
+                <img src="assets/img/Foire aux oignons/Gobelet.jpg" alt="Illustration du projet">
                 <p class="titre">06_Foire aux Oignons</p>
                 <p class="domaine">Motion Design</p>
             </div>
-            <div class="projet">
+            <div class="projet opacity">
                 <img src="assets/img/Louis Vuitton/Sac shopping.jpg" alt="Illustration du projet">
                 <p class="titre">07_Louis Vuitton</p>
                 <p class="domaine">Branding & Motion Design</p>
@@ -151,6 +168,7 @@
     <section id="contact">
         <!-- Logo et réseaux sociaux d'Esteban -->
         <div class="réseaux">
+            <span></span>
             <img src="assets/img/logo/logo_noir.png" alt="logo noir">
             <content>
                 <p>Esteban_Graphic Designer</p>
@@ -163,17 +181,18 @@
         </div>
         <div class="coordonnees">
             <!-- Coordonnées d'Esteban -->
+            <span></span>
             <article>
                 <h2 class="fade-in">Mes coordonnées</h2>
                 <p class="fade-in">Parlez-moi de votre nouveau projet.</p>
                 <p class="fade-in">Collaborons ensemble et créons un projet qui vous correspond.</p>
                 <aside>
                     <div class="fade-in">
-                        <img src="assets/img/logo/logo_noir.png" alt="Image d'enveloppe indiquant l'envoie d'un email">
+                        <img src="assets/img/logo/logo-mail.png" alt="Image d'enveloppe indiquant l'envoie d'un email">
                         <a href="mailto:esteban.deroussin@icloud.com">Écrivez-moi</a>
                     </div>
                     <div class="fade-in">
-                        <img src="assets/img/logo/logo_noir.png" alt="Image d'un téléphone indiquant l'appelle du créateur">
+                        <img src="assets/img/logo/logo-telephone.png" alt="Image d'un téléphone indiquant l'appelle du créateur">
                         <a href="tel:+33 6 15 23 27 19">+33 0 15 23 27 19</a>
                     </div>
                 </aside>
@@ -192,11 +211,11 @@
                         <a href="https://github.com/ArthurMathis">GitHub</a> 
                     </div>
                     <div class="item-reseau fade-in">
-                        <img src="assets/img/logo/Github_logo.png" alt="">
+                        <img src="assets/img/logo/logo-telephone.png" alt="">
                         <a href="tel:+33 6 38 85 55 57">+33 6 85 55 57</a>
                     </div>
                     <div class="item-reseau fade-in">
-                        <img src="assets/img/logo/Github_logo.png" alt="">
+                        <img src="assets/img/logo/logo-mail.png" alt="">
                         <a href="mailto:mathis.arthur68@gmail.com">mathis.arthur68@gmail.com</a>
                     </div>
                 </div>
@@ -209,7 +228,7 @@
                     <a href="#" class="fade-in">02_Tapis Roulant</a>
                     <a href="#" class="fade-in">03_Les Vielles Charrues</a>
                     <a href="#" class="fade-in">04_Au delà de la Peur</a>
-                    <a href="#" class="fade-in">05_Make Technologie</a>
+                    <a href="#" class="fade-in">05_Meg Technologie</a>
                     <a href="#" class="fade-in">06_Foire aux Oignons</a>
                     <a href="#" class="fade-in">07_Louis Vuitton</a>
                 </div>
@@ -381,12 +400,12 @@
                 </div>
             </article>
 
-            <!-- Make Technologie -->
+            <!-- Meg Technologie -->
             <article class="projet lignes">
                 <aside>
                     <div class="titre">
                         <h1>05</h1>
-                        <h1>Make Technologie</h1>
+                        <h1>Meg Technologie</h1>
                     </div>
                     <div class="domaine">
                         <h2>Domaine</h2>
