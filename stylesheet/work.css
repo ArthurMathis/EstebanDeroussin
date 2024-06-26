@@ -1,0 +1,692 @@
+@font-face {
+    font-family: "Montreal_italic";
+    src: url("../assets/typo/Neue Montreal/PPNeueMontreal-ThinItalic.ttf");
+}
+@font-face {
+    font-family: "Montreal_Medium";
+    src: url("../assets/typo/Neue Montreal/PPNeueMontreal-Medium.ttf");
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+#menu {
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    padding: 0 var(--margin);
+
+
+}
+#menu::before {
+    display: none;
+}
+
+section h1 {
+    display: flex;
+    font-size: 8.8em;
+    padding-left: 20px;
+    position: relative;
+    font-family: "Montreal_Medium";
+    top: -25px;
+
+    
+}
+#work .left article {
+    display: flex;
+    flex-direction: column;
+
+}
+#work .left article nav{
+  padding-top: 25px;
+  padding-bottom: 8px;
+
+}
+#work .left article nav > a {
+    font-family: "Supply";
+    font-weight: 200;
+    font-size: var(--police-extra-small);
+    border: 1px solid #999;
+    border-radius: 2px;
+    padding: 8px;
+    transition: color ease 250ms, background-color ease 250ms;
+    will-change: color, background-color;
+  }
+  #work .left article nav > a:hover {
+    color: var(--black);
+    background-color: var(--white);
+  }
+#work {
+    display: flex;
+    width: calc(100% - 2 * var(—margin));
+    height: 60vh;
+    min-height: 500px;
+    padding-top: 69px;
+    padding-right: var(--margin);
+    padding-left: var(--margin);
+    background-color: var(--black);   
+}
+#work::after {
+    width: calc(100dvw - 2 * var(—margin));
+    transform: translateY(15px); }
+
+#work * {
+    color: var(--white);
+}
+#work .left {
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    padding-bottom: var(--margin) 
+}
+#work .left::after {
+    height: 100%;
+    width: 1px;
+    background-color: var(--white);
+    top: 0;
+    right: 0;
+
+}
+
+#work .left article * {
+    font-family: "Supply";
+  font-weight: var(--police-weigth-small);
+  font-size: var(--police-small);
+}
+#work .left div {
+    display: flex;
+    gap:10dvw;
+}
+#work .left div * {
+  font-size: var(--police-small);
+}
+.Grand_titre {
+    display: flex;
+    width: calc(100dvw-40px);
+    height: 40dvh;
+    max-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:  20px;
+    margin-right: 20px;
+    backdrop-filter:blur(10px);
+    
+}
+.Grand_titre::after {
+    width: calc(100dvw - 2 * var(—margin));
+    transform: translateY(15px); 
+    left: 0;
+}
+.Grand_titre div {
+    display: flex;
+    width: 40%;
+    color: white;
+    padding-top: 23px;
+}
+.Grand_titre div p,.Grand_titre div ul {
+    width: 50%;
+}
+.Grand_titre div p {
+    padding-left: 50%;
+    font-size:var(--police-small);
+}
+.Grand_titre div ul {
+    padding-left: 28%;
+}
+.Grand_titre div ul li {
+    width: 100%;
+    font-size:var(--police-small);
+}
+h2#text-overlay {
+    display: flex;
+    color: white;
+    z-index: 1;
+    font-family: "Montreal";
+    font-size: 8.8em ;
+    line-height: 0.84;
+    font-family: "Montreal_Medium";
+    margin-top: 20px;
+    }
+#intervale {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+#intervale a {
+  font-family: "Montreal";
+  font-size: 0.9em;
+
+}
+.explication_projet h3 {
+    font-size: 4.5em;
+    line-height: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: center;
+  
+}
+.explication_projet h3 i {
+    font-family: "Montreal_italic";
+    font-weight: 100; 
+    font-size: 1em;
+}
+.rectangle {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 55px;
+    will-change: box-shadow;
+    transition: box-shadow ease 600ms;
+  }
+
+.rectangle.active {
+    box-shadow: inset 0 55px 0 0 var(--black);
+    margin-top: 20px;
+}
+
+#Le_projet .lignes::after {
+    top: 0; 
+}
+#Le_projet {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    }
+#Le_projet > p {
+    width: 20%;
+    margin-top: 40px;
+    font-size:var(--police-small);
+}
+#Le_projet > div {
+    width: 80%;
+    }
+#Le_projet > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#Le_projet > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Le_projet > div > video {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#Le_projet > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#Le_projet > div > div > p {
+        width: 35%;
+        margin-top: 20px;
+        font-size:var(--police-small);
+        }
+#Le_projet > div > div > img {
+        width: 80%;
+        height: auto ;
+        margin-top: 20px;
+        object-fit: cover;
+        }
+        #Le_projet_04 .lignes::after {
+            top: 0; 
+        }
+        #Le_projet_04 {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            }
+        #Le_projet_04 > p {
+            font-family: "Montreal";
+            font-size:var(--police-small);
+            width: 20%;
+            margin-top: 40px;
+        }
+        #Le_projet_04 > div {
+            width: 80%;
+            }
+        #Le_projet_04 > div {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-top: var(--margin);
+        }
+        
+        #Le_projet_04 > div > p {
+            width: 15%;
+            margin-top: 20px;
+            font-size:var(--police-small);
+        }
+        #Le_projet_04 > div > img {
+            width: 38%;
+            height: 100%;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+        #Le_projet_04 > div > div {
+            display: flex;
+            width: 55%;
+            margin: var(--margin) 0 0 10%;
+            height: fit-content;
+            }
+        #Le_projet_04 > div > div > p {
+                width: 35%;
+                margin-top: 20px;
+                font-size:var(--police-small);
+                }
+        #Le_projet_04 > div > div > img {
+                width: 65%;
+                height: auto ;
+                margin-top: 20px;
+                object-fit: cover;
+                }
+
+#Sliders::after {
+    top: 0; 
+ }
+#Sliders {
+    display: flex;
+    width: 87.4%;
+    height: fit-content;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    left: 12.7%
+}
+#Sliders img {
+    width: 65%;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+#Sliders p {
+    padding-top: 13px;
+    width: 15%;
+    font-size:var(--police-small);
+}
+#Le_projet_03 .lignes::after {
+    top: 0; 
+}
+#Le_projet_03 {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    }
+#Le_projet_03 > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#Le_projet_03 > div {
+    width: 80%;
+    }
+#Le_projet_03 > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#Le_projet_03 > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Le_projet_03 > div > video {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#Le_projet_03 > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#Le_projet_03 > div > div > p {
+        width: 35%;
+        margin-top: 20px;
+        font-size:var(--police-small);
+        }
+#Le_projet_03 > div > div > p1 {
+        width: 55%;
+        height: auto ;
+        margin-top: 20px;
+        object-fit: cover;
+        font-size:var(--police-small);
+        }
+
+#Le_projet_03 .lignes::after {
+    top: 0; 
+}
+#Le_projet_03 {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    }
+#Le_projet_03 > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#Le_projet_03 > div {
+    width: 80%;
+    }
+#Le_projet_03 > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#Le_projet_03 > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Le_projet_03 > div > video {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#Le_projet_03 > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#Le_projet_03 > div > div > p {
+        width: 35%;
+        margin-top: 20px;
+        font-size:var(--police-small);
+        }
+#Le_projet_03 > div > div > p1 {
+        width: 55%;
+        height: auto ;
+        margin-top: 20px;
+        object-fit: cover;
+        font-size:var(--police-small);
+        }
+
+
+
+        #Le_projet_05 .lignes::after {
+            top: 0; 
+        }
+        #Le_projet_05 {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            }
+        #Le_projet_05 > p {
+            font-family: "Montreal";
+            font-size:var(--police-small);
+            width: 20%;
+            margin-top: 40px;
+        }
+        #Le_projet_05 > div {
+            width: 80%;
+            }
+        #Le_projet_05 > div {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-top: var(--margin);
+        }
+        
+        #Le_projet_05 > div > p {
+            width: 15%;
+            margin-top: 20px;
+            font-size:var(--police-small);
+        }
+        #Le_projet_05 > div > img {
+            width: 38%;
+            height: 100%;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+        #Le_projet_05 > div > div {
+            display: flex;
+            width: 55%;
+            margin: var(--margin) 0 0 10%;
+            height: fit-content;
+            }
+        #Le_projet_05 > div > div > p {
+                width: 35%;
+                margin-top: 20px;
+                font-size:var(--police-small);
+                }
+        #Le_projet_05 > div > div p1 {
+                width: 55%;
+                height: auto ;
+                margin-top: 20px;
+                object-fit: cover;
+                font-size:var(--police-small);
+                
+                }
+        #Le_projet_05 > div > div p1 b {
+            font-family: "Montreal Bold";
+            font-size:var(--police-small);
+        }
+
+        #Le_projet_06 .lignes::after {
+            top: 0; 
+        }
+        #Le_projet_06 {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            }
+        #Le_projet_06 > p {
+            font-family: "Montreal";
+            font-size:var(--police-small);
+            width: 20%;
+            margin-top: 40px;
+        }
+        #Le_projet_06 > div {
+            width: 80%;
+            }
+        #Le_projet_06 > div {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-top: var(--margin);
+        }
+        
+        #Le_projet_06 > div > p {
+            width: 15%;
+            margin-top: 20px;
+            font-size:var(--police-small);
+        }
+        #Le_projet_06 > div > img {
+            width: 38%;
+            height: 100%;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+        #Le_projet_06 > div > div {
+            display: flex;
+            width: 55%;
+            margin: var(--margin) 0 0 10%;
+            height: fit-content;
+            }
+        #Le_projet_06 > div > div > p {
+                width: 35%;
+                margin-top: 20px;
+                font-size:var(--police-small);
+                }
+        #Le_projet_06 > div > div p1 {
+                width: 85%;
+                height: auto ;
+                margin-top: 20px;
+                padding-right: 45px;
+                object-fit: cover;
+                font-size:var(--police-small);
+                
+                }
+        #Le_projet_06 > div > div p1 b {
+            font-family: "Montreal Bold";
+            font-size:var(--police-small);
+        }
+
+        #Le_projet_07 .lignes::after {
+            top: 0; 
+        }
+        #Le_projet_07 {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            }
+        #Le_projet_07 > p {
+            font-family: "Montreal";
+            font-size:var(--police-small);
+            width: 20%;
+            margin-top: 40px;
+        }
+        #Le_projet_07 > div {
+            width: 80%;
+            }
+        #Le_projet_07 > div {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-top: var(--margin);
+        }
+        
+        #Le_projet_07 > div > p {
+            width: 15%;
+            margin-top: 20px;
+            font-size:var(--police-small);
+        }
+        #Le_projet_07 > div > img {
+            width: 38%;
+            height: 100%;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+        #Le_projet_07 > div > div {
+            display: flex;
+            width: 55%;
+            margin: var(--margin) 0 0 10%;
+            height: fit-content;
+            }
+        #Le_projet_07 > div > div > p {
+                width: 35%;
+                margin-top: 20px;
+                font-size:var(--police-small);
+                }
+        #Le_projet_07 > div > div p1 {
+                width: 85%;
+                height: auto ;
+                margin-top: 20px;
+                padding-right: 45px;
+                object-fit: cover;
+                font-size:var(--police-small);
+                }
+        #Le_projet_07 > div > div p1 b {
+            font-family: "Montreal Bold";
+            font-size:var(--police-small);
+        }
+
+        #Le_projet_08 .lignes::after {
+            top: 0; 
+        }
+        #Le_projet_08 {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            }
+        #Le_projet_08 > p {
+            font-family: "Montreal";
+            font-size:var(--police-small);
+            width: 20%;
+            margin-top: 40px;
+        }
+        #Le_projet_08 > div {
+            width: 80%;
+            }
+        #Le_projet_08 > div {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            margin-top: var(--margin);
+        }
+        
+        #Le_projet_08 > div > p {
+            width: 15%;
+            margin-top: 20px;
+            font-size:var(--police-small);
+        }
+        #Le_projet_08 > div > video {
+            width: 50%;
+            height: 100%;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+        #Le_projet_08 > div > div {
+            display: flex;
+            width: 55%;
+            margin: var(--margin) 0 0 10%;
+            height: fit-content;
+            }
+        #Le_projet_08 > div > div > p {
+                width: 35%;
+                margin-top: 20px;
+                margin-right: 43px;
+                font-size:var(--police-small);
+                }
+        #Le_projet_08 > div > div img {
+                width: 90%;
+                height: auto ;
+                margin-top: 20px;
+                padding-right: 45px;
+                object-fit: cover;
+                font-size:var(--police-small);
+                
+                }
+        #Le_projet_08 > div > div p1 b {
+            font-family: "Montreal Bold";
+            font-size:var(--police-small);
+        }
