@@ -6,6 +6,30 @@ body {
 
 // Stylesheet de l'entête
 
+@keyframes Open-Web-App-firstLogo {
+    0%, 50% {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+
+        height: 6em;
+        width: auto;
+
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        position: fixed;
+        top: calc(var(--police-small) + var(--margin) + 50px);
+        left: var(--margin);
+
+        height: calc(50dvh - (15px + 50px + 30px + 55px));
+        width: auto;
+
+        transform: none;
+    }
+}
+
+
 #entete{
     display: flex;
     flex-direction: column;
@@ -21,11 +45,23 @@ body {
     }
     
     & .section_logo{
-        display: flex;
-        gap: calc(var(--margin) * 2);
-    
-        & img{
-            height: calc(50dvh - (15px + 50px + 30px + 55px));
+        position: relative;
+        display: block;
+        height: calc((50dvh - (15px + 50px + 30px + 55px)));
+
+        & > img {
+            position: absolute;
+            top: 0;
+
+            width: calc(1.48 * (50dvh - 150px));
+
+            &:first-of-type {
+                left: 0;
+            }
+
+            &:last-of-type {
+                left: calc(1.48 * (50dvh - 130px));
+            }
         }
     }
     

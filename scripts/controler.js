@@ -31,3 +31,7 @@ galerieButton.addEventListener('click', () => {
         });
     }, 800);
 });
+
+window.addEventListener('reload', () => {
+    window.location = "index.php";
+});
