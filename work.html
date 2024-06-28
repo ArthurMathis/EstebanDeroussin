@@ -8,8 +8,8 @@
     <link rel="icon" href="assets/img/logo/logo_noir.png">
 
     <link rel="stylesheet" href="stylesheet/styles.css">
-    <link rel="stylesheet" href="stylesheet/work.css">
     <link rel="stylesheet" href="stylesheet/AnimateItems.css">
+    <link rel="stylesheet" href="stylesheet/work.css">
 
     <script src="scripts/in-view.min.js"></script>
     <script src="scripts/simpleParallax.js"></script>
@@ -40,7 +40,7 @@
     <p id="calendrier">Mer 3 avril</p>
 </nav>
 <section id="work" class="lignes">
-    <section class="left lignes">
+    <aside class="left lignes">
         <div>
             <p class="fade-in">Projets :</p>
             <ul>
@@ -63,61 +63,72 @@
                 <a class="fade-in dev_button">Illustration</a>
             </nav>
         </article>
-    </section>
-        <h1 class="fade-in"> Work</h1>
-    </section>
-        <div id="intervale">
-            <li  class="fade-in"><a herf="#">01_Tapis Roulant</a></li>
-            <li  class="fade-in"><a herf="#">Motion Design</a></li>
-        </div>
-    <section style="background-image: url('../assets/img/Tapis roulant/Fichier 1Titre_tapis_roulant.png');" class="lignes Grand_titre">
-        <div>
-            <p class="fade-in">Outils:</p>
-            <ul>
-                <li class="fade-in">01_Cinema 4D</li>
-                <li class="fade-in">02_After Effect</li>
-            </ul>
-        </div>
-        <h2 id="text-overlay" class="=fade-in">Tapis <br> roulant</h2>
-    </section>
-    <section class="explication_projet" >
-        <h3 class="fade-in">Dans ce projet j’ai réalisé une petite animation à l’aide du <i>logiciel C4D</i>. L’objectif était de mettre en valeur des accessoires personnalisés tout en apprenant les bases de l’<i>animation 3D</i></h1>
-        <div class="rectangle"></div>
-    </section>
-    <section id="Le_projet"> 
+    </aside>
+    <h1 class="fade-in"> Work</h1>
+</section>
+<!-- Section Tapis Roulant -->
+<section id="tapis-roulant" class="projet-container">
+    <header>
+        <p>01_Tapis Roulant</p>
+        <p>Motion Design</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="../assets/img/Tapis roulant/Fichier 1Titre_tapis_roulant.png" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Cinema 4D</li>
+                    <li class="fade-in">02_After Effect</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">Tapis <br> roulant</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">Dans ce projet j’ai réalisé une petite animation à l’aide du <i>logiciel C4D</i>. L’objectif était de mettre en valeur des accessoires personnalisés tout en apprenant les bases de l’<i>animation 3D</i>
+        </h3>
+    </content>
+    <div class="rectangle"></div>
+    <main>
         <p class="fade-in">Le projet:</p>
-            <div class="motion lignes">
-                <p class="fade-in">Motion:</p>
-                <video autoplay muted loop src="assets/mov/Tapis roulant - Animation 3D.mov"></video>
-                <div class="lignes" class="Détails">
-                    <p class="fade-in">Détails:</p>
-                    <img src="assets/img/Tapis roulant/Fichier 2Details_tapis.png" alt="">
-                </div>
-            </div>   
-    </section>
-    <div class="rectangle"></div>
-</section>
-<div id="intervale">
-    <li  class="fade-in"><a herf="#">02_Au delà de la peur</a></li>
-    <li  class="fade-in"><a herf="#">Print</a></li>
-</div>
-<section style="background-image: url('assets/img/Au delà de la Peur/Fichier 3Présentation_au_dela_peur.jpg');" class="lignes Grand_titre">
-    <div>
-        <p class="fade-in">Outils:</p>
-        <ul>
-            <li class="fade-in">1_Indesign</li>
-            <li class="fade-in">2_Photoshop</li>
-        </ul>
-    </div>
-    <h2 id="text-overlay" class="=fade-in">Au delà <br>de la peur</h2>
-</section>
-<section class="explication_projet" >
-    <h3 class="fade-in">J’ai réalisé avec <i>Yohen Kreitz</i> et <i>Kilian Guenier</i>  une mise en page sur le roman horifique. L’idée était de ne pas tomber dans les clichés et de proposer une vision moderne de ce style de litérature </h1>
-    <div class="rectangle"></div>
-</section>
-<section id="Le_projet_04"> 
-    <p>Le projet:</p>
         <div class="motion lignes">
+            <p class="fade-in">Motion:</p>
+            <video autoplay muted loop src="assets/mov/Tapis roulant - Animation 3D.mov"></video>
+            <div class="lignes" class="Détails">
+                <p class="fade-in">Détails:</p>
+                <img src="assets/img/Tapis roulant/Fichier 2Details_tapis.png" alt="">
+            </div>
+        </div>
+    </main>
+    <div class="rectangle lignes"></div>
+</section>
+<!-- Section Au delà de la Peur -->
+<section id="Au-dela-de-la-peur" class="Projet-container-autre-travaux">
+    <header class="lignes">
+        <p>02_Au delà de la peur</p>
+        <p>Print</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="assets/img/Au delà de la Peur/Presentation Au-dela Peur.jpg" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Indesign</li>
+                    <li class="fade-in">02_Photoshop</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">Au delà <br> de la peur</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">J’ai réalisé avec <i>Yohen Kreitz</i> et <i>Kilian Guenier</i>  une mise en page sur le roman horifique. L’idée était de ne pas tomber dans les clichés et de proposer une vision moderne de ce style de litérature</h3>
+    </content>
+    <div class="rectangle"></div>
+    <main>
+        <p>Le projet:</p>
+        <div class="lignes">
             <p class="fade-in">Couverture:</p>
             <img src="assets/img/Au delà de la Peur/Page de garde.jpg" alt="">
             <div class="lignes" class="Détails">
@@ -125,82 +136,91 @@
                 <img src="assets/img/Au delà de la Peur/Page de fin.jpg" alt="">
             </div>
         </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Les pages:</p>
-    <img class="" src="assets/img/Au delà de la Peur/Shining.jpg" alt="">
-  </div> 
-<div class="rectangle"></div>
-<div id="intervale">
-    <li  class="fade-in"><a herf="#">03_La Vuelta</a></li>
-    <li  class="fade-in"><a herf="#">Branding</a></li>
-</div>
-<section style="background-image: url('assets/img/Vuelta/Fichier 4Présentation_la_vuelta.jpg');" class="lignes Grand_titre">
-    <div>
-        <p class="fade-in">Outils:</p>
-        <ul>
-            <li class="fade-in">1_Indesign</li>
-            <li class="fade-in">2_Photoshop</li>
-        </ul>
-    </div>
-    <h2 id="text-overlay" class="=fade-in">La <br>Vuelta</h2>
+    </main>
+    <div class="rectangle lignes"></div>
 </section>
-<section class="explication_projet" >
-    <h3 class="fade-in">J’ai réalisé la communication visuelle du <i>tour d’Espagne</i>. L’idée était de trouver une identité forte mettant en valeur le vélo a travers un visuel a lecture multiples.</h1>
+<!-- Section La Vuelta -->
+<section id="La_Vuelta" class="Projet-container-autre-travaux">
+    <header class="lignes">
+        <p>03_La Vuelta</p>
+        <p>Branding</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="assets/img/Vuelta/Presentation La Vuelta.jpg" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Indesign</li>
+                    <li class="fade-in">02_Photoshop</li>
+                    <li class="fade-in">03_Illustrator</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">La <br>Vuelta</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">J’ai réalisé la communication visuelle du <i>tour d’Espagne</i>. L’idée était de trouver une identité forte mettant en valeur le vélo a travers un visuel a lecture multiples.</h3>
+    </content>
     <div class="rectangle"></div>
-</section>
-<section id="Le_projet_03"> 
-    <p>Le projet:</p>
+    <main>
+        <p>Le projet:</p>
         <div class="motion lignes">
-            <p class="fade-in">Motion</p>
+            <p class="fade-in">Couverture:</p>
             <video autoplay muted loop src="assets/mov/La Vuelta - Animation rouge.mp4"></video>
             <div class="lignes" class="Détails">
-                <p class="fade-in">Explication:</p>
+                <p class="fade-in">4ème de couverture:</p>
                 <p1 class="fade-in">L’élément graphique principal de l’affiche représente trois éléments différents. Il peut être assimilé dans un premier temps à des routes sur lesquelles le cycliste pédale lors du tour. On peut aussi y voir la structure métallique d’un vélo le stickers représentant le plateau de vitesse. Enfin cet éléments peut aussi faire penser au fibres musculaire d’un mollet qui travaillent lors du pédalage.</p1>
             </div>
         </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Billboard affiches</p>
-    <img src="assets/img/Vuelta/Noir & Blanc.jpg" alt="">
-  </div> 
-  <section id="Le_projet_04"> 
-    <p></p>
-        <div class="motion lignes">
-            <p class="fade-in">Gourde</p>
-            <img src="assets/img/Vuelta/Gourle.jpg" alt="">
-            <div class="lignes" class="Détails">
-                <p class="fade-in">Sac</p>
-                <img src="assets/img/Vuelta/Sac.jpg" alt="">
+    </main>
+    <div class="lignes Billboard_affiches">
+        <p class="fade-in">Billboard affiches</p>
+        <img src="assets/img/Vuelta/Noir & Blanc.jpg" alt="">
+      </div> 
+      <section class="Sac_Gourde"> 
+        <p></p>
+            <div class="motion lignes">
+                <p class="fade-in">Gourde</p>
+                <img src="assets/img/Vuelta/Gourle.jpg" alt="">
+                <div class="lignes" class="Détails">
+                    <p class="fade-in">Sac</p>
+                    <img src="assets/img/Vuelta/Sac.jpg" alt="">
+                </div>
             </div>
-        </div>
- </section> 
-<div class="rectangle"></div>
-<div id="intervale">
-    <li  class="fade-in"><a herf="#">04_Meg Technology</a></li>
-    <li  class="fade-in"><a herf="#">UX/UI</a></li>
-</div>
-<section style="background-image: url('assets/img/Make Tech/Meg_tech_Intro.jpg');" class="lignes Grand_titre">
-    <div>
-        <p class="fade-in">Outils:</p>
-        <ul>
-            <li class="fade-in">1_Figma</li>
-            <li class="fade-in">2_Cinema 4D</li>
-        </ul>
-    </div>
-    <h2 id="text-overlay" class="=fade-in">Meg <br>Technology</h2>
+      </section> 
+      <div class="rectangle lignes"></div>
 </section>
-<section class="explication_projet" >
-    <h3 class="fade-in">J’ai réalisé un site web sur une <i>carte mère d’ordinateur</i>. L’idée était de créer un site attractif pour présenter un produit dans un style <i>minimaliste</i> tout en utilisant un visuel en 3D.</h1>
+<!-- Section Meg Technologie -->
+<section id="Meg_tech" class="Projet-container-autre-travaux">
+    <header class="lignes">
+        <p>04_Meg Technology</p>
+        <p>UX/UI</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="assets/img/Make Tech/Intro Meg Tech .jpg" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Figma</li>
+                    <li class="fade-in">02_Cinema 4D</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">Meg <br>Technology</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">J’ai réalisé un site web sur une <i>carte mère d’ordinateur</i>. L’idée était de créer un site attractif pour présenter un produit dans un style <i>minimaliste</i> tout en utilisant un visuel en 3D.</h3>
+    </content>
     <div class="rectangle"></div>
-</section>
-<section id="Le_projet_05"> 
-    <p>Le projet:</p>
-        <div class="motion lignes">
-            <p class="fade-in">Motion</p>
-            <img src="assets/img/Make Tech/Meg_tech.jpg" alt="">
+    <main>
+        <p>Le projet:</p>
+        <div class="lignes">
+            <p class="fade-in">Page d'acceuil</p>
+            <img src="assets/img/Make Tech/Meg tech.jpg" alt="">
             <div class="lignes" class="Détails">
-                <p class="fade-in">Explication:</p>
+                <p class="fade-in">Explications:</p>
                 <p1 class="fade-in">L’objectif de ce projet était de réaliser une <b>landing 
                     page</b> d’un site web sur le thème de son choix. J’ai 
                     choisi de travailler sur une <b>carte mère d’ordinateur</b> et 
@@ -212,200 +232,185 @@
                     l’expérience.</p1>
             </div>
         </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Billboard affiches</p>
-    <img src="assets/img/Make Tech/menu.png" alt="">
-  </div> 
-  <div class="rectangle"></div>
-<div id="intervale">
-    <li  class="fade-in"><a herf="#">05_Foire aux oignons</a></li>
-    <li  class="fade-in"><a herf="#">Branding</a></li>
-</div>
-<section style="background-image: url('assets/img/Foire aux oignons/Intro_FAO.jpg');" class="lignes Grand_titre">
-    <div>
-        <p class="fade-in">Outils:</p>
-        <ul>
-            <li class="fade-in">1_Cyanotype</li>
-            <li class="fade-in">2_Photoshop</li>
-        </ul>
-    </div>
-    <h2 id="text-overlay" class="=fade-in">Foire aux<br>oignons</h2>
+    </main>
+    <div class="lignes sliders">
+        <p class="fade-in">Slider de la landing page</p>
+        <img src="assets/img/Make Tech/menu.png" alt="">
+      </div> 
+      <div class="rectangle"></div>
 </section>
-<section class="explication_projet" >
-    <h3 class="fade-in">L’objectif de ce projet était de réaliser la comunication de la <i>Foire aux oignon de Brumath</i>. Nous avon mis en valeur une <i>technique</i> très <i>brut</i> qui offre un rendu <i>naturel</i> faisant référence au <i>carractère artisanal</i> et <i>traditionnel</i> de la culture de l'oignon.  </h1>
+<!-- Section Foire aux Oignons -->
+<section id="Foire_aux_oignons" class="Projet-container-autre-travaux">
+    <header class="lignes">
+        <p>05_Foire aux oignons</p>
+        <p>Branding</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="../assets/img/Foire aux oignons/Intro FAO.jpg" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Cyanotype</li>
+                    <li class="fade-in">02_Photoshop</li>
+                    <li class="fade-in">03_Indesign</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">Foire <br>Aux oignons</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">L’objectif de ce projet était de réaliser la comunication de la <i>Foire aux oignon de Brumath</i>. Nous avon mis en valeur une <i>technique</i> très <i>brut</i> qui offre un rendu <i>naturel</i> faisant référence au <i>carractère artisanal</i> et <i>traditionnel</i> de la culture de l'oignon.</h3>
+    </content>
     <div class="rectangle"></div>
-</section>
-<section id="Le_projet_06"> 
-    <p>Le projet:</p>
-        <div class="motion lignes">
-            <p class="fade-in">Affiche</p>
+    <main>
+        <p>Le projet:</p>
+        <div class="lignes">
+            <p class="fade-in">Page d'acceuil</p>
             <img src="assets/img/Foire aux oignons/Zoomjpg.jpg" alt="">
             <div class="lignes" class="Détails">
-                <p class="fade-in">Explication:</p>
+                <p class="fade-in">Explications:</p>
                 <p1 class="fade-in">À l’origine, la Foire aux oignons était une occasion pour les agriculteurs de vendre leurs récoltes afin de financer les fournitures scolaires de leurs enfants.
 
                     Bien que le nom de la foire soit resté inchangé, les stands des commerçants offrent désormais une variété de
                     produits allant des fruits et légumes aux saucissons, en passant par le miel et les vêtements. Les 350 exposants
                     présents proposent une gamme 
                     diversifiée de produits qui sauront 
-                    sûrement séduire les visiteurs. De plus, de nombreux chalets gourmands dans les rues offrent des spécialités culinaires à base d’oignons. <br><br>La ville de Brumath comprend un <b>patrimoine riche et varié</b> largement mis en valeur lors de la Foire aux oignons. Récolter un oignon résulte d’un <b>processus long et éreintant</b>. Chaque <b>bulbe</b> est <b>enfoncé à la main</b> dans une <b>terre préalablement entretenue</b>. Ils doivent également être <b>plantés</b> à une <b>période spécifique</b>. Le projet s’axe sur l’aspect artisanal de l’événement, à travers des visuels réalisés de manière traditionnels et éco-responsables.
-                    
+                    sûrement séduire les visiteurs. De plus, de nombreux chalets gourmands dans les rues offrent des spécialités culinaires à base d’oignons. <br><br>La ville de Brumath comprend un <b>patrimoine riche et varié</b> largement mis en valeur lors de la Foire aux oignons. Récolter un oignon résulte d’un <b>processus long et éreintant</b>. Chaque <b>bulbe</b> est <b>enfoncé à la main</b> dans une <b>terre préalablement entretenue</b>. Ils doivent également être <b>plantés</b> à une <b>période spécifique</b>. Le projet s’axe sur l’aspect artisanal de l’événement, à travers des visuels réalisés de manière traditionnels et éco-responsables.</p1>
             </div>
         </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Billboard affiches</p>
-    <img src="assets/img/Foire aux oignons/Affiches.jpg" alt="">
-  </div>   
-  <section id="Le_projet_06"> 
-    <p></p>
-        <div class="motion lignes">
-            <p class="fade-in">Gobelet</p>
+    </main>
+        <div class="lignes Images_solo">
+            <p class="fade-in">Slider de la landing page</p>
+            <img src="assets/img/Foire aux oignons/Affiches.jpg" alt="">
+         </div> 
+      <main>
+        <p></p>
+        <div class="lignes">
+            <p class="fade-in">Page d'acceuil</p>
             <img src="assets/img/Foire aux oignons/Gobelet.jpg" alt="">
             <div class="lignes" class="Détails">
                 <p class="fade-in">Explications:</p>
-                <p1>Nous avons choisi d’utiliser le <b>cyanotype</b> pour produire le visuel de l’affiche. C’est une technique qui offre un rendu très <b>brut</b> ce qui permet de faire référence au <b>carractère artisanal</b> et <b>traditionnel</b> de la culture de l’oignon. Pour ce qui est de la 
+                <p1 class="fade-in">Nous avons choisi d’utiliser le <b>cyanotype</b> pour produire le visuel de l’affiche. C’est une technique qui offre un rendu très <b>brut</b> ce qui permet de faire référence au <b>carractère artisanal</b> et <b>traditionnel</b> de la culture de l’oignon. Pour ce qui est de la 
                     <b>typographie</b> l’idée etait de conserver le carractère artisanal et traditionnel. Nous avons donc choisi la
                     typographie <b> “Times New Roman” </b>pour son 
                     carractère <b>étroit</b> et <b>écoresponsable</b>. <br><br>
                     Nous avons choisi de travailler avec du 
                     cyanotype. 
                     L’objectif était de mettre en valeur une technique très brut. Technique artisanale qui offre un rendu très naturel que nous avons <b>conservé dans les couleurs</b> de l’affiches afin de garder
-                    les marques de <b>l’action de la nature</b> sur la coupe de l’oignon.</p1></p1>
+                    les marques de <b>l’action de la nature</b> sur la coupe de l’oignon.</p1>
             </div>
         </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Billboard affiche_02</p>
-    <img src="assets/img/Foire aux oignons/Mockup.jpg" alt="">
-  </div> 
-  <div class="rectangle"></div>
-  <div id="intervale">
-    <li  class="fade-in"><a herf="#">05_Les vieilles charrues</a></li>
-    <li  class="fade-in"><a herf="#">Branding</a></li>
-</div>
-<section style="background-image: url('assets/img/Les vielles charrues/Titre_LesVielle_char.jpg');" class="lignes Grand_titre">
-    <div>
-        <p class="fade-in">Outils:</p>
-        <ul>
-            <li class="fade-in">1_Cyanotype</li>
-            <li class="fade-in">2_Photoshop</li>
-        </ul>
-    </div>
-    <h2 id="text-overlay" class="=fade-in">Les Vieilles<br>charrues</h2>
+    </main>
+        <div class="lignes Images_solo">
+            <p class="fade-in">Slider de la landing page</p>
+            <img src="assets/img/Foire aux oignons/Mockup.jpg" alt="">
+        </div>
+      <div class="rectangle"></div>
 </section>
-<section class="explication_projet" >
-    <h3 class="fade-in">J'ai proposé une identitée visuelle pour le festival de musique <i>«Les Vielles Charrues»</i>. Il fallait réaliser un bloc marque, une affiche et des déclinaissons sur différents goodies. J'ai choisi d'xplorer un style <i>psychedelique</i> pour son attrait <i>intemporel</i>. </h1>
+<!-- Section Les vieilles Charrues -->
+<section id="Les_vielles" class="Projet-container-autre-travaux">
+    <header class="lignes">
+        <p>06_Les Vieilles Charrues</p>
+        <p>Branding</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="assets/img/Les vielles charrues/LesVieillesCharrues.jpg" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Illustrator</li>
+                    <li class="fade-in">02_Photoshop</li>
+                    <li class="fade-in">03_Indesign</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">Les Vielles<br> Charrues</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">J'ai proposé une identitée visuelle pour le festival de musique <i>«Les Vielles Charrues»</i>. Il fallait réaliser un bloc marque, une affiche et des déclinaissons sur différents goodies. J'ai choisi d'xplorer un style <i>psychedelique</i> pour son attrait <i>intemporel</i>. </h3>
+    </content>
     <div class="rectangle"></div>
-</section>
-<section id="Le_projet_07"> 
-    <p>Le projet:</p>
-        <div class="motion lignes">
-            <p class="fade-in">L'affiche</p>
+    <main>
+        <p>Le projet:</p>
+        <div class="lignes">
+            <p class="fade-in">Affiche</p>
             <img src="assets/img/Les vielles charrues/Affiche zoom.jpg" alt="">
             <div class="lignes" class="Détails">
-                <p class="fade-in">Explication:</p>
+                <p class="fade-in">Explications:</p>
                 <p1 class="fade-in">Pour répondre à la demande, j’ai choisi d’exploiter un <b>style graphique psychédélique</b>, ce qui m’a permis une <b>liberté créative</b> considérable. Grâce à ce choix j’ai pu m’exprimer de manière audacieuse en créant un <b>visuel qui captive l’imagination</b>. De plus le style psychédélique a aussi un <b>attrait intemporel</b> qui traverse les générations. Il attire donc un <b>public 
                     diversifié</b>, des passionnés de l’époque 
                     psychédélique aux jeunes festivaliers qui cherchent de nouvelles expériences.</p1>
             </div>
         </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Slider de différents visuels </p>
-    <img src="assets/img/Les vielles charrues/Horizontale.jpg" alt="">
-  </div> 
-  <section id="Le_projet_04"> 
-    <p></p>
-        <div class="motion lignes">
-            <p class="fade-in">Gourde</p>
-            <img src="assets/img/Les vielles charrues/Gourde.jpg" alt="">
-            <div class="lignes" class="Détails">
-                <p class="fade-in">Sac</p>
-                <img src="assets/img/Les vielles charrues/Sac.jpg" alt="">
+    </main>
+    <div class="lignes sliders">
+        <p class="fade-in">Sliders des visuels</p>
+        <img src="assets/img/Les vielles charrues/Horizontale.jpg" alt="">
+      </div> 
+      <section class="Gourde_Sac"> 
+        <p></p>
+            <div class="motion lignes">
+                <p class="fade-in">Gourde</p>
+                <img src="assets/img/Les vielles charrues/Gourde.jpg" alt="">
+                <div class="lignes" class="Détails">
+                    <p class="fade-in">Sac</p>
+                    <img src="assets/img/Les vielles charrues/Sac.jpg" alt="">
+                </div>
             </div>
-        </div>
- </section> 
- <section id="Le_projet_07"> 
-    <p></p>
-        <div class="motion lignes">
-            <p class="fade-in">L'affiche</p>
+      </section>
+      <main>
+        <p></p>
+        <div class="lignes">
+            <p class="fade-in">Affiche</p>
             <img src="assets/img/Les vielles charrues/Affiche_billboerd_bleu.jpg" alt="">
             <div class="lignes" class="Détails">
-                <p class="fade-in">Explication:</p>
+                <p class="fade-in">Explications:</p>
                 <p1 class="fade-in">J’ai choisi une palette de <b>couleurs saturées</b> pour appuyer le <b>caractère déganté</b> de ma direction artistique que j’ai déclinée en <b>deux versions</b> afin d’apporter du <b>dynamisme à mes visuels</b>. La palette est faite <b>de trois couleurs différentes</b>. Une couleur principale qui pose les éléments graphiques majeurs, une couleur secondaire qui fait ressortir certains de ces éléments ainsi qu’une troisième couleur : le blanc, qui vient apporter du dynamisme et donner du liant. <br><br>
-                    Les <b>choix de typographies</b> permettent d’appuyer le <b>caractère psychédélique</b> tout en préservant la compréhension des différentes informations présentes. En choisissant une direction artistique psychédélique, j’ai créé un <b>environnement stimulant</b> et <b>engageant</b> qui restera gravé dans la mémoire des participants, offrant une expérience décalée aux festivaliers. . </p1>
+                    Les <b>choix de typographies</b> permettent d’appuyer le <b>caractère psychédélique</b> tout en préservant la compréhension des différentes informations présentes. En choisissant une direction artistique psychédélique, j’ai créé un <b>environnement stimulant</b> et <b>engageant</b> qui restera gravé dans la mémoire des participants, offrant une expérience décalée aux festivaliers.</p1>
             </div>
         </div>
- </section> 
- <section id="Le_projet_04"> 
-    <p></p>
-        <div class="motion lignes">
-            <p class="fade-in">Sac</p>
-            <img src="assets/img/Les vielles charrues/Sac_bleu.jpg" alt="">
-            <div class="lignes" class="Détails">
-                <p class="fade-in">T-shirt</p>
-                <img src="assets/img/Les vielles charrues/T_shirt.jpg" alt="">
+    </main>
+    <section class="Sac_T-shirt"> 
+        <p></p>
+            <div class="motion lignes">
+                <p class="fade-in">Sac</p>
+                <img src="assets/img/Les vielles charrues/Sac_bleu.jpg" alt="">
+                <div class="lignes" class="Détails">
+                    <p class="fade-in">T-shirt</p>
+                    <img src="assets/img/Les vielles charrues/T_shirt.jpg" alt="">
+                </div>
             </div>
-        </div>
- </section> 
-<div class="rectangle"></div>
-<div id="intervale">
-    <li  class="fade-in"><a herf="#">06_Electro polis</a></li>
-    <li  class="fade-in"><a herf="#">Branding</a></li>
-</div>
-<section style="background-image: url('assets/img/Electro-Polis/Couverture_electropolis.jpg');" class="lignes Grand_titre">
-    <div>
-        <p class="fade-in">Outils:</p>
-        <ul>
-            <li class="fade-in">1_Cyanotype</li>
-            <li class="fade-in">2_Photoshop</li>
-        </ul>
-    </div>
-    <h2 id="text-overlay" class="=fade-in">Electro<br>Polis</h2>
+      </section>
+      <div class="rectangle"></div>
 </section>
-<section class="explication_projet" >
-    <h3 class="fade-in">L’objectif de ce projet était de réaliser l’<i>dentité visuelle d’un festival de musique Electro</i>. Il fallait réaliser une affiche, un motion et un site web. Le style retenu a été le <i>style psychedelique</i>. </h1>
+<!-- Section Luis Vuitton -->
+<section id="Louis_Vuitton" class="Projet-container-autre-travaux">
+    <header class="lignes">
+        <p>08_Louis Vuitton</p>
+        <p>Branding</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="assets/img/Louis Vuitton/Intro Louis.jpg" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Illustrator</li>
+                    <li class="fade-in">02_Photoshop</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">Louis <br>Vuitton</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">J’ai réalisé avec <i>Yohen Kreitz</i> et <i>Kilian Guenier</i>  une mise en page sur le roman horifique. L’idée était de ne pas tomber dans les clichés et de proposer une vision moderne de ce style de litérature</h3>
+    </content>
     <div class="rectangle"></div>
-</section>
-<section id="Le_projet_08"> 
-    <p>Le projet:</p>
-        <div class="motion lignes">
-            <p class="fade-in">Motion</p>
-            <video autoplay muted loop src="assets/img/Electro-Polis/anim_electro_polis.mp4"></video>
-            <div class="lignes" class="Détails">
-                <p class="fade-in">Affiche</p>
-                <img src="assets/img/Electro-Polis/Affiche_Electro.jpg" alt="">
-            </div>
-        </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Landing page & visuels</p>
-    <img class="" src="assets/img/Electro-Polis/Billeterie.jpg" alt="">
-  </div> 
-<div class="rectangle"></div>
-<div id="intervale">
-    <li  class="fade-in"><a herf="#">07_Louis Vuiton</a></li>
-    <li  class="fade-in"><a herf="#">Branding</a></li>
-</div>
-<section style="background-image: url('assets/img/Louis Vuitton/Intro_Louis.jpg');" class="lignes Grand_titre">
-    <div>
-        <p class="fade-in">Outils:</p>
-        <ul>
-            <li class="fade-in">1_Illustrator</li>
-            <li class="fade-in">2_Photoshop</li>
-        </ul>
-    </div>
-    <h2 id="text-overlay" class="=fade-in">Louis<br>Vuitton</h2>
-</section>
-<section class="explication_projet" >
-    <h3 class="fade-in">Ce projet avait pour objectif la <i>revisite du logo de la marque Louis Vuitton</i>. J'ai du <i>créer une typographie</i> et en faire un monogramme pour la marque.</h1>
-    <div class="rectangle"></div>
-</section>
-<section id="Le_projet_04"> 
-    <p>Le projet:</p>
-        <div class="motion lignes">
+    <main>
+        <p>Le projet:</p>
+        <div class="lignes">
             <p class="fade-in">Parfum</p>
             <img src="assets/img/Louis Vuitton/Flacon.jpg" alt="">
             <div class="lignes" class="Détails">
@@ -413,18 +418,456 @@
                 <img src="assets/img/Louis Vuitton/Sac shopping.jpg" alt="">
             </div>
         </div>
- </section> 
-  <div id="Sliders" class="lignes">
-    <p class="fade-in">Enseigne</p>
-    <img class="" src="assets/img/Louis Vuitton/Magasin.jpg" alt="">
-  </div>
+    </main>
+    <div class="lignes Enseigne">
+        <p class="fade-in">Enseigne</p>
+        <img class="" src="assets/img/Louis Vuitton/Magasin.jpg" alt="">
+    </div>
+</section>
+<!-- Section Electro Polis -->
+<section id="Electro_polis" class="Projet-container-autre-travaux">
+    <header class="lignes">
+        <p>07_Electropolis</p>
+        <p>Branding/UX</p>
+    </header>
+    <article class="lignes">
+        <img class="parallax" src="../assets/img/Electro-Polis/Couverture Electropolis.jpg" alt="">
+        <aside>
+            <div>
+                <p class="fade-in">Outils:</p>
+                <ul>
+                    <li class="fade-in">01_Indesign</li>
+                    <li class="fade-in">02_Photoshop</li>
+                    <li class="fade-in">03_Illustrator</li>
+                    <li class="fade-in">04_XD</li>
+                    <li class="fade-in">05_After Effect</li>
+                </ul>
+            </div>
+            <h2 class="=fade-in">Electro <br> Polis</h2>
+        </aside>
+    </article>
+    <content>
+        <h3 class="fade-in">L'objectif de ce projet était de réaliser l'dentitée visuelle d'un <i>festival de musique electro</i> "Electro-Polis". Le style Utilisé est <i>psychedelique</i> pour coller au carractère <i>dégenté</i> de la musique electro.  </h3>
+    </content>
+    <div class="rectangle"></div>
+    <main>
+        <p>Le projet:</p>
+        <div class="lignes">
+            <p class="fade-in">Motion</p>
+            <video autoplay muted loop src="assets/mov/Electro Polis.mp4"></video>
+            <div class="lignes" class="Détails">
+                <p class="fade-in">Affiche</p>
+                <img src="assets/img/Electro-Polis/Affiche_Electro.jpg" alt="">
+            </div>
+        </div>
+    </main>
+    <div class="lignes Video_site">
+        <p class="fade-in">Landing page</p>
+        <video autoplay muted loop src="assets/mov/Electropolis demo.mp4"></video>
+      </div> 
+    <div class="rectangle lignes"></div>
+</section>
+<!-- Section Contact -->
+<section id="contact">
+    <!-- Logo et réseaux sociaux d'Esteban -->
+    <div class="réseaux">
+        <span></span>
+        <img src="assets/img/logo/logo_noir.png" alt="logo noir">
+        <content>
+            <p>Esteban_Graphic Designer</p>
+            <div>
+                <a class="fade-in" href="https://www.instagram.com/esteban_drs1/">Instagram</a>
+                <a class="fade-in" href="https://www.facebook.com/esteban.deroussin">Facebook</a>
+                <a class="fade-in" href="https://www.linkedin.com/in/esteban-deroussin-28b207252/">Linkedin</a>
+            </div>
+        </content>
+    </div>
+    <div class="coordonnees">
+        <!-- Coordonnées d'Esteban -->
+        <span></span>
+        <article>
+            <h2 class="fade-in">Mes coordonnées</h2>
+            <p class="fade-in">Parlez-moi de votre nouveau projet.</p>
+            <p class="fade-in">Collaborons ensemble et créons un projet qui vous correspond.</p>
+            <aside>
+                <div class="fade-in">
+                    <img src="assets/img/logo/logo-mail.png" alt="Image d'enveloppe indiquant l'envoie d'un email">
+                    <a href="mailto:esteban.deroussin@icloud.com">Écrivez-moi</a>
+                </div>
+                <div class="fade-in">
+                    <img src="assets/img/logo/logo-telephone.png" alt="Image d'un téléphone indiquant l'appelle du créateur">
+                    <a href="tel:+33 6 15 23 27 19">+33 0 15 23 27 19</a>
+                </div>
+            </aside>
+        </article>
+        <!-- Coordonnées d'Arthur -->
+        <div class="developpeur">
+            <p class="fade-in">Développer par <gras>Arthur MATHIS</gras>, étudiant en Licence MIAGE à la Faculté des Sciences et Techniques de l'UHA.</p>
+            <p class="fade-in">Retrouvez ses contacts et autres travaux ci-dessous.</p>
+            <div class="reseaux-arthur">
+                <div class="item-reseau fade-in">
+                    <img src="assets/img/logo/Github_logo.png" alt="Logo Linkedin">
+                    <a href="https://www.linkedin.com/in/arthur-mathis-0a8701268/">Likedin</a>
+                </div>
+                <div class="item-reseau fade-in">
+                    <img src="assets/img/logo/Github_logo.png" alt="Logo github">
+                    <a href="https://github.com/ArthurMathis">GitHub</a> 
+                </div>
+                <div class="item-reseau fade-in">
+                    <img src="assets/img/logo/logo-telephone.png" alt="">
+                    <a href="tel:+33 6 38 85 55 57">+33 6 85 55 57</a>
+                </div>
+                <div class="item-reseau fade-in">
+                    <img src="assets/img/logo/logo-mail.png" alt="">
+                    <a href="mailto:mathis.arthur68@gmail.com">mathis.arthur68@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recap-projet">
+        <p class="fade-in">Projets :</p>
+            <div>
+                <a href="#" class="fade-in">01_La Vuelta</a>
+                <a href="#" class="fade-in">02_Tapis Roulant</a>
+                <a href="#" class="fade-in">03_Les Vielles Charrues</a>
+                <a href="#" class="fade-in">04_Au delà de la Peur</a>
+                <a href="#" class="fade-in">05_Meg Technologie</a>
+                <a href="#" class="fade-in">06_Foire aux Oignons</a>
+                <a href="#" class="fade-in">07_Louis Vuitton</a>
+            </div>
+    </div>
+</section>
+<!-- Section Galerie -->
+<section id="galerie">
+    <nav class="lignes"><p id="closeButton">[Close]</p></nav>
+    <content>
+        <!-- La Vuelta -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>01</h1>
+                    <h1>La Vuelta</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>Branding & Motion Design</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Illustrator, Photoshop, After effect et Indesign</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie">
+                <div class="item small-item">
+                    <img src="assets/img/Vuelta/Affiche noire zoom.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 1 )</p>
+                </div> 
+                <div class="item big-item">
+                    <video src="assets/mov/La Vuelta - Animation rouge.mp4" alt="Affiche animée" autoplay loop></video>
+                    <p>( 2 )</p>
+                </div> 
+                <div class="item small-item">
+                    <video src="assets/mov/La Vuelta - Animation noire.mp4" alt="Affiche animée" autoplay loop></video>
+                    <p>( 3 )</p>
+                </div> 
+                <div class="item big-item">
+                    <img src="assets/img/Vuelta/Noir & Rouge.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 4 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Vuelta/Gourle.jpg" alt="Mockup du projet">
+                    <p>( 5 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Vuelta/Sac.jpg" alt="Mockup du projet">
+                    <p>( 6 )</p>
+                </div> 
+            </div>
+        </article>
 
+        <!-- Tapis Roulant -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>02</h1>
+                    <h1>Tapis Roulant</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>Motion Design & 3D</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Cinema 4D & After Effect</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie">
+                <!-- Faux item forçant l'aligenement -->
+                <div class="small-item"></div>
+                <div class="item big-item">
+                    <video src="assets/mov/Tapis roulant - Animation 3D.mov" autoplay loop></video>
+                    <p>( 1 )</p>
+                </div> 
+            </div>
+        </article>
 
+        <!-- Les Vielles Charrues -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>03</h1>
+                    <h1>Les Vieilles Charrues</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>Branding</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Illustrator, Photoshop et Indesign</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie">
+                <div class="item small-item">
+                    <img src="assets/img/Les vielles charrues/Affiche zoom.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 1 )</p>
+                </div> 
+                <div class="item big-item">
+                    <img src="assets/img/Les vielles charrues/Flyer.jpg" alt="Affiche du projet">
+                    <p>( 2 )</p>
+                </div> 
+                <div class="item big-item">
+                    <img src="assets/img/Les vielles charrues/Affiches.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 3 )</p>
+                </div> 
+                <div class="item small-item">
+                    <img src="assets/img/Les vielles charrues/Gourde.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 4 )</p>
+                </div>
+                <div class="item solo-item">
+                    <img src="assets/img/Les vielles charrues/Horizontale.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 5 )</p>
+                </div>  
+                <div class="item small-item">
+                    <img src="assets/img/Les vielles charrues/Sac.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 6 )</p>
+                </div> 
+                <div class="item big-item">
+                    <img src="assets/img/Les vielles charrues/Tickets Gratuits.jpg" alt="Illustration sous forme de Mockup">
+                    <p>( 7 )</p>
+                </div> 
+            </div>
+        </article>
 
+        <!-- Au delà de la Peur -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>04</h1>
+                    <h1>Au de là de la Peur</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>Print & Photographie</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Photoshop et Indesign</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie">
+                <div class="item small-item">
+                    <img src="assets/img/Au delà de la Peur/Page de fin.jpg" alt="">
+                    <p>( 1 )</p>
+                </div> 
+                <div class="item big-item">
+                    <img src="assets/img/Au delà de la Peur/Page de garde.jpg" alt="">
+                    <p>( 2 )</p>
+                </div> 
+                <div class="item solo-item">
+                    <img src="assets/img/Au delà de la Peur/Les mécanismes.jpg" alt="">
+                    <p>( 3 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Au delà de la Peur/Shining.jpg" alt="">
+                    <p>( 4 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Au delà de la Peur/Shutter.jpg" alt="">
+                    <p>( 5 )</p>
+                </div> 
+            </div>
+        </article>
 
+        <!-- Meg Technologie -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>05</h1>
+                    <h1>Meg Technologie</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>UX Design</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Figma et Cinema 4D</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie">
+                <div class="item solo-item">
+                    <img src="assets/img/Make Tech/Carte mère.jpg" alt="">
+                    <p>( 1 )</p>
+                </div> 
+                <div class="item solo-item">
+                    <img src="assets/img/Make Tech/WiFi.jpg" alt="">
+                    <p>( 2 )</p>
+                </div> 
+            </div>
+        </article>
 
+        <!-- Electro-Polis -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>06</h1>
+                    <h1>Electro-Polis</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>Branding & UX Design</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Illustrator, Photoshop & Figma</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie">
+                <div class="item solo-item">
+                    <img src="assets/img/Electro-Polis/Electropolis.jpg" alt="">
+                    <p>( 1 )</p>
+                </div> 
+                <div class="item small-item">
+                    <img src="assets/img/Electro-Polis/Billboard.jpg" alt="">
+                    <p>( 2 )</p>
+                </div> 
+                <div class="item big-item">
+                    <img src="assets/img/Electro-Polis/Billeterie.jpg" alt="">
+                    <p>( 3 )</p>
+                </div> 
+                <div class="item solo-item">
+                    <img src="assets/img/Electro-Polis/Mockup Macbook pro.jpg" alt="">
+                    <p>( 4 )</p>
+                </div> 
+            </div>
+        </article>
+
+        <!-- Foire aux Oignons -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>07</h1>
+                    <h1>Foire aux oignons</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>Branding</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Illustrator, Photoshop & Indesign</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie">
+                <div class="item">
+                    <img src="assets/img/Foire aux oignons/Zoomjpg.jpg" alt="">
+                    <p>( 1 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Foire aux oignons/Mockup.jpg" alt="">
+                    <p>( 2 )</p>
+                </div> 
+                <div class="item big-item">
+                    <img src="assets/img/Foire aux oignons/Affiches.jpg" alt="">
+                    <p>( 3 )</p>
+                </div> 
+                <div class="item small-item">
+                    <img src="assets/img/Foire aux oignons/Gobelet.jpg" alt="">
+                    <p>( 4 )</p>
+                </div> 
+            </div>
+        </article>
+
+        <!-- Louis Vuitton -->
+        <article class="projet lignes">
+            <aside>
+                <div class="titre">
+                    <h1>08</h1>
+                    <h1>Louis Vuitton</h1>
+                </div>
+                <div class="domaine">
+                    <h2>Domaine</h2>
+                    <h2>Branding</h2>
+                </div>
+                <div class="outils">
+                    <h2>Outils</h2>
+                    <h2>Illustrator & Photoshop</h2>
+                </div>
+            </aside>
+            <div class="mask"></div>
+            <div class="items-galerie lignes">
+                <div class="item">
+                    <img src="assets/img/Louis Vuitton/Magasin.jpg" alt="">
+                    <p>( 1 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Louis Vuitton/Sac shopping.jpg" alt="">
+                    <p>( 2 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Louis Vuitton/Logo.jpg" alt="">
+                    <p>( 3 )</p>
+                </div> 
+                <div class="item">
+                    <img src="assets/img/Louis Vuitton/Flacon.jpg" alt="">
+                    <p>( 4 )</p>
+                </div> 
+            </div>
+        </article>
+    </content>
+</section>
 
 <script src="scripts/data.js"></script>
 <script src="scripts/work-view.js"></script>
+<script>
+    const galerieButton = document.getElementById('galerieButton');
+    const closeGalerieButton = document.getElementById('closeButton');
+    const galerie = document.getElementById('galerie');
+    const body = document.body;
+
+    galerieButton.addEventListener('click', () => {
+        galerie.style.display = 'block';
+        body.style.overflowY = 'hidden';
+
+        setTimeout(() => {
+            closeGalerieButton.addEventListener('click', () => {
+                galerie.classList.add('disparition');
+                setTimeout(() => {
+                    galerie.style.display = 'none';
+                    body.style.overflowY = 'auto';
+                    galerie.classList.remove('disparition');
+                }, 800);
+            });
+        }, 800);
+    });
+</script>
 </body>
 </html>

@@ -7,61 +7,67 @@
     src: url("../assets/typo/Neue Montreal/PPNeueMontreal-Medium.ttf");
 }
 
-
+/******** Css de base ********/
 body {
-    margin: 0;
-    padding: 0;
     width: 100dvw;
     min-height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+
     overflow-x: hidden;
 }
 
+/*
+.rectangle {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 55px;
+    will-change: box-shadow;
+    transition: box-shadow ease 600ms;
+  }
+
+.rectangle.active {
+    box-shadow: inset 0 55px 0 0 var(--black);
+    margin-top: 20px;
+}*/
+.rectangle {
+    margin-top: 20px;
+    width: 100%;
+    height: 55px;
+    will-change: box-shadow;
+    transition: box-shadow ease 600ms;
+  }
+
+.rectangle.active {
+    box-shadow: inset 0 55px 0 0 var(--black);
+    margin-top: 20px;
+}
+/******** Css du menu ********/
 #menu {
     background-color: white;
     margin: 0;
     width: 100%;
     padding: 0 var(--margin);
-
-
 }
 #menu::before {
     display: none;
 }
 
 section h1 {
-    display: flex;
-    font-size: 8.8em;
-    padding-left: 20px;
     position: relative;
-    font-family: "Montreal_Medium";
     top: -25px;
-
-    
-}
-#work .left article {
     display: flex;
-    flex-direction: column;
 
+    padding-left: 20px;
+    font-size: 8.8em;
+    font-family: "Montreal_Medium";
 }
-#work .left article nav{
-  padding-top: 25px;
-  padding-bottom: 8px;
 
-}
-#work .left article nav > a {
-    font-family: "Supply";
-    font-weight: 200;
-    font-size: var(--police-extra-small);
-    border: 1px solid #999;
-    border-radius: 2px;
-    padding: 8px;
-    transition: color ease 250ms, background-color ease 250ms;
-    will-change: color, background-color;
-  }
-  #work .left article nav > a:hover {
-    color: var(--black);
-    background-color: var(--white);
-  }
+
+/******** CSS du #Work ********/
 #work {
     display: flex;
     width: calc(100% - 2 * var(—margin));
@@ -73,9 +79,8 @@ section h1 {
     background-color: var(--black);   
 }
 #work::after {
-    width: calc(100dvw - 2 * var(—margin));
-    transform: translateY(15px); }
-
+    transform: translateY(15px); 
+}
 #work * {
     color: var(--white);
 }
@@ -97,7 +102,6 @@ section h1 {
     right: 0;
 
 }
-
 #work .left article * {
     font-family: "Supply";
   font-weight: var(--police-weigth-small);
@@ -110,583 +114,1035 @@ section h1 {
 #work .left div * {
   font-size: var(--police-small);
 }
-.Grand_titre {
+#work .left article {
     display: flex;
-    width: calc(100dvw-40px);
-    height: 40dvh;
-    max-height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left:  20px;
-    margin-right: 20px;
-    backdrop-filter:blur(10px);
-    
+    flex-direction: column;
+
 }
-.Grand_titre::after {
-    width: calc(100dvw - 2 * var(—margin));
-    transform: translateY(15px); 
+#work .left article nav{
+  padding-top: 25px;
+  padding-bottom: 8px;
+
+}
+#work .left article nav > a {
+    font-family: "Supply";
+    font-weight: 200;
+    font-size: var(--police-extra-small);
+    border: 1px solid #999;
+    border-radius: 2px;
+    padding: 8px;
+    transition: color ease 250ms, background-color ease 250ms;
+    will-change: color, background-color;
+}
+#work .left article nav > a:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+/******** New CSS ********/
+
+/******** Project container de base ********/
+
+.projet-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin);
+
+    width: calc(100% - 2 * var(--margin));
+    height: fit-content;
+
+    margin: 0 var(--margin);
+    padding-top: var(--margin);
+}
+.projet-container header {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: fit-content;
+    padding-top: 5px;
+    margin-bottom: -12px;
+}
+.projet-container header p {
+    font-size:var(--police-small);
+}
+.projet-container article {
+    position: relative;
+    width: 100%;
+    height: 41dvh;
+}
+.projet-container article img {
+    display: block;
+    width: 100%;
+    height: calc(41dvh - 13px);
+
+    object-fit: cover;
+}
+.projet-container article aside {
+    position: absolute;
+    top: 0;
     left: 0;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
-.Grand_titre div {
+.projet-container article aside div {
     display: flex;
     width: 40%;
     color: white;
     padding-top: 23px;
 }
-.Grand_titre div p,.Grand_titre div ul {
+.projet-container article aside div p,
+.projet-container article aside div ul {
     width: 50%;
 }
-.Grand_titre div p {
+.projet-container article aside div p {
     padding-left: 50%;
     font-size:var(--police-small);
 }
-.Grand_titre div ul {
+.projet-container article aside div ul {
     padding-left: 28%;
 }
-.Grand_titre div ul li {
+.projet-container article aside div ul li {
     width: 100%;
     font-size:var(--police-small);
 }
-h2#text-overlay {
+.projet-container article h2 {
     display: flex;
-    color: white;
     z-index: 1;
+    margin-top: 20px;
+
+    color: white;
     font-family: "Montreal";
     font-size: 8.8em ;
     line-height: 0.84;
-    font-family: "Montreal_Medium";
-    margin-top: 20px;
-    }
-#intervale {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
+    font-family: "Montreal_Medium";   
 }
-
-#intervale a {
-  font-family: "Montreal";
-  font-size: 0.9em;
-
-}
-.explication_projet h3 {
-    font-size: 4.5em;
+.projet-container content h3 {
+    font-size: 4.8em;
     line-height: 1;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 10px;
     text-align: center;
   
 }
-.explication_projet h3 i {
+.projet-container content h3 i {
     font-family: "Montreal_italic";
     font-weight: 100; 
     font-size: 1em;
 }
-.rectangle {
-    margin-top: 20px;
-    margin-left: 20px;
-    padding-right: 20px;
+.projet-container .rectangle {
+    display: block;
     width: 100%;
     height: 55px;
+
     will-change: box-shadow;
     transition: box-shadow ease 600ms;
   }
 
-.rectangle.active {
+.projet-container .rectangle.active {
     box-shadow: inset 0 55px 0 0 var(--black);
-    margin-top: 20px;
 }
 
-#Le_projet .lignes::after {
+/******** Projet-container-autre-travaux ********/
+
+.Projet-container-autre-travaux {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin);
+
+    width: calc(100% - 2 * var(--margin));
+    height: fit-content;
+
+    margin: 0 var(--margin);
+    padding-top: 13px;
+}
+.Projet-container-autre-travaux header {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: fit-content;
+    padding-top: 5px;
+    margin-bottom: -12px;
+}
+.Projet-container-autre-travaux header p {
+    font-size:var(--police-small);
+}
+.Projet-container-autre-travaux article {
+    position: relative;
+    width: 100%;
+    height: 41dvh;
+}
+.Projet-container-autre-travaux article img {
+    display: block;
+    width: 100%;
+    height: calc(41dvh - 13px);
+
+    object-fit: cover;
+}
+.Projet-container-autre-travaux article aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.Projet-container-autre-travaux article aside div {
+    display: flex;
+    width: 40%;
+    color: white;
+    padding-top: 23px;
+}
+.Projet-container-autre-travaux article aside div p,
+.Projet-container-autre-travaux article aside div ul {
+    width: 50%;
+}
+.Projet-container-autre-travaux article aside div p {
+    padding-left: 50%;
+    font-size:var(--police-small);
+}
+.Projet-container-autre-travaux article aside div ul {
+    padding-left: 28%;
+}
+.Projet-container-autre-travaux article aside div ul li {
+    width: 100%;
+    font-size:var(--police-small);
+}
+.Projet-container-autre-travaux article h2 {
+    display: flex;
+    z-index: 1;
+    margin-top: 20px;
+
+    color: white;
+    font-family: "Montreal";
+    font-size: 8.8em ;
+    line-height: 0.84;
+    font-family: "Montreal_Medium";   
+}
+.Projet-container-autre-travaux content h3 {
+    font-size: 4.8em;
+    line-height: 1;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 10px;
+    text-align: center;
+  
+}
+.Projet-container-autre-travaux content h3 i {
+    font-family: "Montreal_italic";
+    font-weight: 100; 
+    font-size: 1em;
+}
+.Projet-container-autre-travaux .rectangle {
+    display: block;
+    width: 100%;
+    height: 55px;
+
+    will-change: box-shadow;
+    transition: box-shadow ease 600ms;
+  }
+
+.Projet-container-autre-travaux .rectangle.active {
+    box-shadow: inset 0 55px 0 0 var(--black);
+}
+
+/******** Tapis roulant ********/
+#work::after {
+    width: calc(100% - 2 * var(--margin));
+}
+#tapis-roulant main .lignes::after {
     top: 0; 
 }
-#Le_projet {
+#tapis-roulant main {
     display: flex;
     width: 100%;
     height: fit-content;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    }
-#Le_projet > p {
+}
+#tapis-roulant main > p {
     width: 20%;
-    margin-top: 40px;
+    margin-top: var(--margin);
     font-size:var(--police-small);
 }
-#Le_projet > div {
+#tapis-roulant main > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding-top: var(--margin);
+}
+#tapis-roulant main > div > p {
+    width: 15%;
+    font-size:var(--police-small);
+}
+#tapis-roulant main > div > video {
+    width: 38%;
+    height: 100%;
+    /*margin-top: 20px;*/
+    margin-bottom: 80px;
+}
+#tapis-roulant main > div > div {
+    display: flex;
+    width: 55%;
+    /*margin: var(--margin) 0 0 10%;*/
+    margin-left: 10%;
+    height: fit-content;
+}
+#tapis-roulant main > div > div::after {
+    width: 100%;
+}
+#tapis-roulant main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#tapis-roulant main > div > div > img {
+    width: 80%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+/******** Au delà de la peur ********/
+#Au-dela-de-la-peur .lignes::after {
+    top: 0;
+}
+#Au-dela-de-la-peur main .lignes::after {
+    top: 0; 
+}
+#Au-dela-de-la-peur main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+#Au-dela-de-la-peur main > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#Au-dela-de-la-peur main > div {
     width: 80%;
     }
-#Le_projet > div {
+#Au-dela-de-la-peur main > div {
     display: flex;
     width: 100%;
     height: fit-content;
     margin-top: var(--margin);
 }
 
-#Le_projet > div > p {
+#Au-dela-de-la-peur main > div > p {
     width: 15%;
     margin-top: 20px;
     font-size:var(--police-small);
 }
-#Le_projet > div > video {
+#Au-dela-de-la-peur main > div > img {
     width: 38%;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 80px;
 }
-#Le_projet > div > div {
+#Au-dela-de-la-peur main > div > div {
     display: flex;
     width: 55%;
     margin: var(--margin) 0 0 10%;
     height: fit-content;
     }
-#Le_projet > div > div > p {
-        width: 35%;
-        margin-top: 20px;
-        font-size:var(--police-small);
-        }
-#Le_projet > div > div > img {
-        width: 80%;
-        height: auto ;
-        margin-top: 20px;
-        object-fit: cover;
-        }
-        #Le_projet_04 .lignes::after {
-            top: 0; 
-        }
-        #Le_projet_04 {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-left: 20px;
-            margin-bottom: 30px;
-            }
-        #Le_projet_04 > p {
-            font-family: "Montreal";
-            font-size:var(--police-small);
-            width: 20%;
-            margin-top: 40px;
-        }
-        #Le_projet_04 > div {
-            width: 80%;
-            }
-        #Le_projet_04 > div {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-top: var(--margin);
-        }
-        
-        #Le_projet_04 > div > p {
-            width: 15%;
-            margin-top: 20px;
-            font-size:var(--police-small);
-        }
-        #Le_projet_04 > div > img {
-            width: 38%;
-            height: 100%;
-            margin-top: 20px;
-            margin-bottom: 80px;
-        }
-        #Le_projet_04 > div > div {
-            display: flex;
-            width: 55%;
-            margin: var(--margin) 0 0 10%;
-            height: fit-content;
-            }
-        #Le_projet_04 > div > div > p {
-                width: 35%;
-                margin-top: 20px;
-                font-size:var(--police-small);
-                }
-        #Le_projet_04 > div > div > img {
-                width: 65%;
-                height: auto ;
-                margin-top: 20px;
-                object-fit: cover;
-                }
+#Au-dela-de-la-peur main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Au-dela-de-la-peur main > div > div > img {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+}
 
-#Sliders::after {
+
+/******** La Vuelta ********/
+
+#La_Vuelta .lignes::after {
+    top: 0;
+}
+#La_Vuelta main .lignes::after {
+    top: 0; 
+}
+#La_Vuelta main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+#La_Vuelta main > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#La_Vuelta main > div {
+    width: 80%;
+    }
+#La_Vuelta main > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#La_Vuelta main > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#La_Vuelta main > div > video {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#La_Vuelta main > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#La_Vuelta main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#La_Vuelta main > div > div > p1 {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+    font-size: var(--police-small);
+    padding-right: 40px;
+}
+#La_Vuelta .Billboard_affiches::after {
     top: 0; 
  }
-#Sliders {
+#La_Vuelta .Billboard_affiches  {
     display: flex;
     width: 87.4%;
     height: fit-content;
-    margin-left: 20px;
+    
     margin-bottom: 30px;
     left: 12.7%
 }
-#Sliders img {
+#La_Vuelta .Billboard_affiches  img {
     width: 65%;
     padding-top: 20px;
     margin-bottom: 80px;
 }
-#Sliders p {
+#La_Vuelta .Billboard_affiches  p {
     padding-top: 13px;
     width: 15%;
     font-size:var(--police-small);
 }
-#Le_projet_03 .lignes::after {
+.Sac_Gourde .lignes::after {
     top: 0; 
 }
-#Le_projet_03 {
+.Sac_Gourde {
     display: flex;
     width: 100%;
     height: fit-content;
-    margin-left: 20px;
     margin-bottom: 30px;
     }
-#Le_projet_03 > p {
+.Sac_Gourde > p {
     font-family: "Montreal";
     font-size:var(--police-small);
     width: 20%;
     margin-top: 40px;
 }
-#Le_projet_03 > div {
+.Sac_Gourde > div {
     width: 80%;
     }
-#Le_projet_03 > div {
+.Sac_Gourde > div {
     display: flex;
     width: 100%;
     height: fit-content;
     margin-top: var(--margin);
 }
 
-#Le_projet_03 > div > p {
+.Sac_Gourde > div > p {
     width: 15%;
     margin-top: 20px;
     font-size:var(--police-small);
 }
-#Le_projet_03 > div > video {
+.Sac_Gourde > div > img {
     width: 38%;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 80px;
 }
-#Le_projet_03 > div > div {
+.Sac_Gourde > div > div {
     display: flex;
     width: 55%;
     margin: var(--margin) 0 0 10%;
     height: fit-content;
     }
-#Le_projet_03 > div > div > p {
-        width: 35%;
-        margin-top: 20px;
-        font-size:var(--police-small);
-        }
-#Le_projet_03 > div > div > p1 {
-        width: 55%;
-        height: auto ;
-        margin-top: 20px;
-        object-fit: cover;
-        font-size:var(--police-small);
-        }
+.Sac_Gourde > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+.Sac_Gourde > div > div > img {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+}
 
-#Le_projet_03 .lignes::after {
+
+
+
+/******** Meg_tech ********/
+
+#Meg_tech .lignes::after {
+    top: 0;
+}
+
+#Meg_tech main .lignes::after {
     top: 0; 
 }
-#Le_projet_03 {
+#Meg_tech main {
     display: flex;
     width: 100%;
     height: fit-content;
-    margin-left: 20px;
     margin-bottom: 30px;
     }
-#Le_projet_03 > p {
+#Meg_tech main > p {
     font-family: "Montreal";
     font-size:var(--police-small);
     width: 20%;
     margin-top: 40px;
 }
-#Le_projet_03 > div {
+#Meg_tech main > div {
     width: 80%;
     }
-#Le_projet_03 > div {
+#Meg_tech main > div {
     display: flex;
     width: 100%;
     height: fit-content;
     margin-top: var(--margin);
 }
 
-#Le_projet_03 > div > p {
+#Meg_tech main > div > p {
     width: 15%;
     margin-top: 20px;
     font-size:var(--police-small);
 }
-#Le_projet_03 > div > video {
+#Meg_tech main > div > img {
     width: 38%;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 80px;
 }
-#Le_projet_03 > div > div {
+#Meg_tech main > div > div {
     display: flex;
     width: 55%;
     margin: var(--margin) 0 0 10%;
     height: fit-content;
     }
-#Le_projet_03 > div > div > p {
-        width: 35%;
-        margin-top: 20px;
-        font-size:var(--police-small);
-        }
-#Le_projet_03 > div > div > p1 {
-        width: 55%;
-        height: auto ;
-        margin-top: 20px;
-        object-fit: cover;
-        font-size:var(--police-small);
-        }
+#Meg_tech main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Meg_tech main > div > div > p1 {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+    font-size: var(--police-small);
+    padding-right: 40px;
+}
+#Meg_tech main > div > div > p1 b {
+    font-family: "Montreal Bold";
+    font-size: var(--police-small);
+}
+#Meg_tech .sliders::after {
+    top: 0; 
+ }
+#Meg_tech .sliders  {
+    display: flex;
+    width: 87.4%;
+    height: fit-content;
+    margin-bottom: 30px;
+    left: 12.7%
+}
+#Meg_tech .sliders  img {
+    width: 65%;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+#Meg_tech .sliders  p {
+    padding-top: 13px;
+    width: 15%;
+    font-size:var(--police-small);
+} 
 
 
 
-        #Le_projet_05 .lignes::after {
-            top: 0; 
-        }
-        #Le_projet_05 {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-left: 20px;
-            margin-bottom: 30px;
-            }
-        #Le_projet_05 > p {
-            font-family: "Montreal";
-            font-size:var(--police-small);
-            width: 20%;
-            margin-top: 40px;
-        }
-        #Le_projet_05 > div {
-            width: 80%;
-            }
-        #Le_projet_05 > div {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-top: var(--margin);
-        }
-        
-        #Le_projet_05 > div > p {
-            width: 15%;
-            margin-top: 20px;
-            font-size:var(--police-small);
-        }
-        #Le_projet_05 > div > img {
-            width: 38%;
-            height: 100%;
-            margin-top: 20px;
-            margin-bottom: 80px;
-        }
-        #Le_projet_05 > div > div {
-            display: flex;
-            width: 55%;
-            margin: var(--margin) 0 0 10%;
-            height: fit-content;
-            }
-        #Le_projet_05 > div > div > p {
-                width: 35%;
-                margin-top: 20px;
-                font-size:var(--police-small);
-                }
-        #Le_projet_05 > div > div p1 {
-                width: 55%;
-                height: auto ;
-                margin-top: 20px;
-                object-fit: cover;
-                font-size:var(--police-small);
-                
-                }
-        #Le_projet_05 > div > div p1 b {
-            font-family: "Montreal Bold";
-            font-size:var(--police-small);
-        }
 
-        #Le_projet_06 .lignes::after {
-            top: 0; 
-        }
-        #Le_projet_06 {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-left: 20px;
-            margin-bottom: 30px;
-            }
-        #Le_projet_06 > p {
-            font-family: "Montreal";
-            font-size:var(--police-small);
-            width: 20%;
-            margin-top: 40px;
-        }
-        #Le_projet_06 > div {
-            width: 80%;
-            }
-        #Le_projet_06 > div {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-top: var(--margin);
-        }
-        
-        #Le_projet_06 > div > p {
-            width: 15%;
-            margin-top: 20px;
-            font-size:var(--police-small);
-        }
-        #Le_projet_06 > div > img {
-            width: 38%;
-            height: 100%;
-            margin-top: 20px;
-            margin-bottom: 80px;
-        }
-        #Le_projet_06 > div > div {
-            display: flex;
-            width: 55%;
-            margin: var(--margin) 0 0 10%;
-            height: fit-content;
-            }
-        #Le_projet_06 > div > div > p {
-                width: 35%;
-                margin-top: 20px;
-                font-size:var(--police-small);
-                }
-        #Le_projet_06 > div > div p1 {
-                width: 85%;
-                height: auto ;
-                margin-top: 20px;
-                padding-right: 45px;
-                object-fit: cover;
-                font-size:var(--police-small);
-                
-                }
-        #Le_projet_06 > div > div p1 b {
-            font-family: "Montreal Bold";
-            font-size:var(--police-small);
-        }
+/******** Foire aux oignons ********/
 
-        #Le_projet_07 .lignes::after {
-            top: 0; 
-        }
-        #Le_projet_07 {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-left: 20px;
-            margin-bottom: 30px;
-            }
-        #Le_projet_07 > p {
-            font-family: "Montreal";
-            font-size:var(--police-small);
-            width: 20%;
-            margin-top: 40px;
-        }
-        #Le_projet_07 > div {
-            width: 80%;
-            }
-        #Le_projet_07 > div {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-top: var(--margin);
-        }
-        
-        #Le_projet_07 > div > p {
-            width: 15%;
-            margin-top: 20px;
-            font-size:var(--police-small);
-        }
-        #Le_projet_07 > div > img {
-            width: 38%;
-            height: 100%;
-            margin-top: 20px;
-            margin-bottom: 80px;
-        }
-        #Le_projet_07 > div > div {
-            display: flex;
-            width: 55%;
-            margin: var(--margin) 0 0 10%;
-            height: fit-content;
-            }
-        #Le_projet_07 > div > div > p {
-                width: 35%;
-                margin-top: 20px;
-                font-size:var(--police-small);
-                }
-        #Le_projet_07 > div > div p1 {
-                width: 85%;
-                height: auto ;
-                margin-top: 20px;
-                padding-right: 45px;
-                object-fit: cover;
-                font-size:var(--police-small);
-                }
-        #Le_projet_07 > div > div p1 b {
-            font-family: "Montreal Bold";
-            font-size:var(--police-small);
-        }
+#Foire_aux_oignons .lignes::after {
+    top: 0;
+}
 
-        #Le_projet_08 .lignes::after {
-            top: 0; 
-        }
-        #Le_projet_08 {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-left: 20px;
-            margin-bottom: 30px;
-            }
-        #Le_projet_08 > p {
-            font-family: "Montreal";
-            font-size:var(--police-small);
-            width: 20%;
-            margin-top: 40px;
-        }
-        #Le_projet_08 > div {
-            width: 80%;
-            }
-        #Le_projet_08 > div {
-            display: flex;
-            width: 100%;
-            height: fit-content;
-            margin-top: var(--margin);
-        }
-        
-        #Le_projet_08 > div > p {
-            width: 15%;
-            margin-top: 20px;
-            font-size:var(--police-small);
-        }
-        #Le_projet_08 > div > video {
-            width: 50%;
-            height: 100%;
-            margin-top: 20px;
-            margin-bottom: 80px;
-        }
-        #Le_projet_08 > div > div {
-            display: flex;
-            width: 55%;
-            margin: var(--margin) 0 0 10%;
-            height: fit-content;
-            }
-        #Le_projet_08 > div > div > p {
-                width: 35%;
-                margin-top: 20px;
-                margin-right: 43px;
-                font-size:var(--police-small);
-                }
-        #Le_projet_08 > div > div img {
-                width: 90%;
-                height: auto ;
-                margin-top: 20px;
-                padding-right: 45px;
-                object-fit: cover;
-                font-size:var(--police-small);
-                
-                }
-        #Le_projet_08 > div > div p1 b {
-            font-family: "Montreal Bold";
-            font-size:var(--police-small);
-        }
+#Foire_aux_oignons main .lignes::after {
+    top: 0; 
+}
+#Foire_aux_oignons main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+#Foire_aux_oignons main > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#Foire_aux_oignons main > div {
+    width: 80%;
+    }
+#Foire_aux_oignons main > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#Foire_aux_oignons main > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Foire_aux_oignons main > div > img {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#Foire_aux_oignons main > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#Foire_aux_oignons main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Foire_aux_oignons main > div > div > p1 {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+    font-size: var(--police-small);
+    padding-right: 40px;
+}
+#Foire_aux_oignons main > div > div > p1 b {
+    font-family: "Montreal Bold";
+    font-size: var(--police-small);
+}
+#Foire_aux_oignons .Images_solo::after {
+    top: 0; 
+ }
+#Foire_aux_oignons .Images_solo  {
+    display: flex;
+    width: 87.4%;
+    height: fit-content;
+    margin-bottom: 30px;
+    left: 12.7%
+}
+#Foire_aux_oignons .Images_solo  img {
+    width: 65%;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+#Foire_aux_oignons .Images_solo  p {
+    padding-top: 13px;
+    width: 15%;
+    font-size:var(--police-small);
+} 
+
+
+
+/******** Les Vielles Charrues ********/
+
+#Les_vielles .lignes::after {
+    top: 0;
+}
+#Les_vielles main .lignes::after {
+    top: 0; 
+}
+#Les_vielles main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+#Les_vielles main > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#Les_vielles main > div {
+    width: 80%;
+    }
+#Les_vielles main > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#Les_vielles main > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Les_vielles main > div > img {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#Les_vielles main > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#Les_vielles main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Les_vielles main > div > div > p1 {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+    font-size: var(--police-small);
+    padding-right: 40px;
+}
+#Les_vielles main > div > div > p1 b {
+    font-family: "Montreal Bold";
+    font-size: var(--police-small);
+}
+#Les_vielles .sliders::after {
+    top: 0; 
+ }
+#Les_vielles .sliders  {
+    display: flex;
+    width: 87.4%;
+    height: fit-content;
+    margin-bottom: 30px;
+    left: 12.7%
+}
+#Les_vielles .sliders  img {
+    width: 65%;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+#Les_vielles .sliders  p {
+    padding-top: 13px;
+    width: 15%;
+    font-size:var(--police-small);
+} 
+.Gourde_Sac .lignes::after {
+    top: 0; 
+}
+.Gourde_Sac {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+.Gourde_Sac > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+.Gourde_Sac > div {
+    width: 80%;
+    }
+.Gourde_Sac > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+.Gourde_Sac > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+.Gourde_Sac > div > img {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+.Gourde_Sac > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+.Gourde_Sac > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+.Gourde_Sac > div > div > img {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+}
+.Sac_T-shirt .lignes::after {
+    top: 0; 
+}
+.Sac_T-shirt {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+.Sac_T-shirt > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+.Sac_T-shirt > div {
+    width: 80%;
+    }
+.Sac_T-shirt > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+.Sac_T-shirt > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+.Sac_T-shirt > div > img {
+    width: 38%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+.Sac_T-shirt > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+.Sac_T-shirt > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+.Sac_T-shirt > div > div > img {
+    width: 65%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+
+
+/******** Electro Polis  ********/
+
+#Electro_polis .lignes::after {
+    top: 0;
+}
+
+#Electro_polis main .lignes::after {
+    top: 0; 
+}
+#Electro_polis main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+#Electro_polis main > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#Electro_polis main > div {
+    width: 80%;
+    }
+#Electro_polis main > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#Electro_polis main > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Electro_polis main > div > video {
+    width: 50%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#Electro_polis main > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#Electro_polis main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Electro_polis main > div > div > img {
+    width: 80%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+}
+#Electro_polis .Video_site::after {
+    top: 0; 
+ }
+#Electro_polis .Video_site  {
+    display: flex;
+    width: 87.4%;
+    height: fit-content;
+    margin-bottom: 30px;
+    left: 12.7%
+}
+#Electro_polis .Video_site  video {
+    width: 80%;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+#Electro_polis .Video_site  p {
+    padding-top: 13px;
+    width: 12.5%;
+    font-size:var(--police-small);
+} 
+
+
+/******** Louis Vuitton ********/
+
+#Louis_Vuitton .lignes::after {
+    top: 0;
+}
+
+#Louis_Vuitton main .lignes::after {
+    top: 0; 
+}
+#Louis_Vuitton main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 30px;
+    }
+#Louis_Vuitton main > p {
+    font-family: "Montreal";
+    font-size:var(--police-small);
+    width: 20%;
+    margin-top: 40px;
+}
+#Louis_Vuitton main > div {
+    width: 80%;
+    }
+#Louis_Vuitton main > div {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: var(--margin);
+}
+
+#Louis_Vuitton main > div > p {
+    width: 15%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Louis_Vuitton main > div > img {
+    width: 45%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+#Louis_Vuitton main > div > div {
+    display: flex;
+    width: 55%;
+    margin: var(--margin) 0 0 10%;
+    height: fit-content;
+    }
+#Louis_Vuitton main > div > div > p {
+    width: 35%;
+    margin-top: 20px;
+    font-size:var(--police-small);
+}
+#Louis_Vuitton main > div > div > img {
+    width: 77%;
+    height: auto ;
+    margin-top: 20px;
+    object-fit: cover;
+}
+#Louis_Vuitton .Enseigne::after {
+    top: 0; 
+ }
+#Louis_Vuitton .Enseigne  {
+    display: flex;
+    width: 87.4%;
+    height: fit-content;
+    
+    margin-bottom: 30px;
+    left: 12.7%
+}
+#Louis_Vuitton .Enseigne  img {
+    width: 65%;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+#Louis_Vuitton .Enseigne  p {
+    padding-top: 13px;
+    width: 15%;
+    font-size:var(--police-small);
+}
+
+
+/******** Contact Work *********/
+
+#contact {
+    padding: 0 var(--margin);
+    margin-bottom: var(--margin);
+}
+
+#galerie {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
