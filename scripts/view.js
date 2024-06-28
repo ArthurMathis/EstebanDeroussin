@@ -106,22 +106,22 @@ const observerProjets = new IntersectionObserver((entries) => {
                     learnLink.href = "work.html#La-Vuelta";
                     break;
                 case 1:
-                    learnLink.href = "work.html#Tapis-Roulant";
+                    learnLink.href = "work.html#tapis-roulant";
                     break;
                 case 2:
-                    learnLink.href = "work.html#Les-Vielles-Charrues";
+                    learnLink.href = "work.html#Les-Vielles";
                     break;
                 case 3:
                     learnLink.href = "work.html#Au-dela-de-la-peur";
                     break;
                 case 4:
-                    learnLink.href = "work.html#Make-technologie";
+                    learnLink.href = "work.html#Meg_tech";
                     break;
                 case 5:
                     learnLink.href = "work.html#Foire-aux-oignons";
                     break;
                 case 6:
-                    learnLink.href = "work.html#Louis-vuitton";
+                    learnLink.href = "work.html#Louis_Vuitton";
                     break;
             }
         }

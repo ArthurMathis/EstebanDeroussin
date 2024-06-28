@@ -31,7 +31,7 @@ document.body.style.overflow = 'auto';
 // Ajout de l'effet parallax sur les images portant la classe parallax
 const paralax = document.getElementsByClassName('parallax');
 new simpleParallax(paralax, {
-    scale: 1.38
+    scale: 1.5
 });
 // Surveille les changements de style sur le corps de la page
 const observer = new MutationObserver((mutationsList) => {
