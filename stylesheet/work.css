@@ -559,16 +559,23 @@ section h1 {
     top: 0; 
  }
 #Meg_tech .sliders  {
+    left: 12.7%;
+
     display: flex;
     width: 87.4%;
     height: fit-content;
+
     margin-bottom: 30px;
-    left: 12.7%
 }
-#Meg_tech .sliders  img {
+#Meg_tech .sliders .slider {
     width: 65%;
-    padding-top: 20px;
+    height: auto;
+    margin-top: var(--margin);
     margin-bottom: 80px;
+}
+#Meg_tech .sliders .slider-puces {
+    margin-top: auto;
+    padding-bottom: 80px;
 }
 #Meg_tech .sliders  p {
     padding-top: 13px;
