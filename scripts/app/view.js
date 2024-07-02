@@ -109,7 +109,7 @@ const observerProjets = new IntersectionObserver((entries) => {
                     learnLink.href = "work.html#tapis-roulant";
                     break;
                 case 2:
-                    learnLink.href = "work.html#Les-Vielles";
+                    learnLink.href = "work.html#Les_vielles";
                     break;
                 case 3:
                     learnLink.href = "work.html#Au-dela-de-la-peur";
@@ -118,7 +118,7 @@ const observerProjets = new IntersectionObserver((entries) => {
                     learnLink.href = "work.html#Meg_tech";
                     break;
                 case 5:
-                    learnLink.href = "work.html#Foire-aux-oignons";
+                    learnLink.href = "work.html#Foire_aux_oignons";
                     break;
                 case 6:
                     learnLink.href = "work.html#Louis_Vuitton";
@@ -136,7 +136,8 @@ projets.forEach(projet => {
     observerProjets.observe(projet);
 });
 
-
 // Ajout du Slider (Preview)
-const preview_slider = new Slider('slider', '.projet', '#projet-puce li');
-preview_slider.init();
+document.addEventListener('DOMContentLoaded', () => {
+    const preview_slider = new scrollSlider('slider', '.projet', '#projet-puce li');
+    preview_slider.init();
+});

@@ -17,15 +17,15 @@ class Slider {
             this.intervalDuration = intervalDuration;
         else 
             this.intervalDuration = 3000;
+    }
 
+    init() {
         // On initialise l'index
         this.currentIndex = 0;
         this.setFocus(this.currentIndex);
         // On empêche le défilment manuel
         this.parent.style.overflowX = 'hidden';
-    }
 
-    init() {
         this.observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -39,13 +39,6 @@ class Slider {
         });
         this.observer.observe(this.parent);
     }
-    
-    // init() {
-    //     this.observer = new IntersectionObserver(this.resetInterval.bind(this), {
-    //         threshold: 0.1
-    //     });
-    //     this.observer.observe(this.parent);
-    // }
 
 
     // Téléchargement des données //
@@ -91,7 +84,7 @@ class Slider {
     setPuces(index) {
         // On vérifie l'intégrité de l'index
         if(index < 0 || this.puces.length <= index)
-            throw new Error("Erreur lors de la sélection d'une puce. L'indice d'une puce ne peut être nul ou dépassé le nombre de puces !");
+            throw new Error("Erreur lors de la sélection d'une puce. L'indice d'une puce ne peut être nul ou dépasser le nombre de puces !");
         
         // On désélectionne l'ancienne puce
         if(index === 0)
@@ -106,10 +99,16 @@ class Slider {
     setImage(index) {
         // On vérifie l'intégrité de l'index
         if(index < 0 || this.slides.length <= index)
-            throw new Error("Erreur lors de la sélection d'une image. L'indice d'une image ne peut être nul ou dépassé le nombre d'images !");
+            throw new Error("Erreur lors de la sélection d'une image. L'indice d'une image ne peut être nul ou dépasser le nombre d'images !");
 
-        // On fait défiler le slider vers la nouvelle image
-        this.slides[index].scrollIntoView({ behavior: 'smooth' }); 
+        // On désélectionne l'ancienne image
+        if(index === 0)
+            this.slides[this.slides.length - 1].classList.remove('visible');
+        else 
+            this.slides[index - 1].classList.remove('visible');
+
+            // On sélectionne la nouvelle image
+        this.puces[index].classList.add('visible');
     }
     /// Méthode sélectionnant une page du slider
     setFocus(index) {
@@ -165,5 +164,38 @@ class Slider {
 
         this.startInterval();
         console.log("AutoScrollFocus relancé.");
+    }
+}
+
+class scrollSlider extends Slider {
+    init() {
+        // On initialise l'index
+        this.currentIndex = 0;
+        this.setPuces(this.currentIndex);
+        // On empêche le défilment manuel
+        this.parent.style.overflowX = 'hidden';
+
+        this.observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.startInterval();
+                } else {
+                    this.stopInterval();
+                }
+            });
+        }, {
+            threshold: 0.6
+        });
+        this.observer.observe(this.parent);
+    }
+
+    /// Méthode sélectionnant une image
+    setImage(index) {
+        // On vérifie l'intégrité de l'index
+        if(index < 0 || this.slides.length <= index)
+            throw new Error("Erreur lors de la sélection d'une image. L'indice d'une image ne peut être nul ou dépasser le nombre d'images !");
+
+        // On fait défiler le slider vers la nouvelle image
+        this.slides[index].scrollIntoView({ behavior: 'smooth' }); 
     }
 }

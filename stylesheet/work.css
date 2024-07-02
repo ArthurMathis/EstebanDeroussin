@@ -8,6 +8,9 @@
 }
 
 /******** Css de base ********/
+section {
+    scroll-margin-top: 50px;
+}
 body {
     width: 100dvw;
     min-height: 100dvh;
@@ -358,54 +361,54 @@ section h1 {
 
 /******** La Vuelta ********/
 
-#La_Vuelta > header::after {
+#La-Vuelta > header::after {
     top: 0;
 }
-#La_Vuelta main {
+#La-Vuelta main {
     display: flex;
     width: 100%;
     height: fit-content;
     margin-bottom: 30px;
     }
-#La_Vuelta main > p {
+#La-Vuelta main > p {
     font-family: "Montreal";
     font-size:var(--police-small);
     width: 20%;
     margin-top: 40px;
 }
-#La_Vuelta main > div {
+#La-Vuelta main > div {
     width: 80%;
     }
-#La_Vuelta main > div {
+#La-Vuelta main > div {
     display: flex;
     width: 100%;
     height: fit-content;
     margin-top: var(--margin);
 }
 
-#La_Vuelta main > div > p {
+#La-Vuelta main > div > p {
     width: 15%;
     margin-top: 20px;
     font-size:var(--police-small);
 }
-#La_Vuelta main > div > video {
+#La-Vuelta main > div > video {
     width: 38%;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 80px;
 }
-#La_Vuelta main > div > div {
+#La-Vuelta main > div > div {
     display: flex;
     width: 55%;
     margin: var(--margin) 0 0 10%;
     height: fit-content;
     }
-#La_Vuelta main > div > div > p {
+#La-Vuelta main > div > div > p {
     width: 35%;
     margin-top: 20px;
     font-size:var(--police-small);
 }
-#La_Vuelta main > div > div > p1 {
+#La-Vuelta main > div > div > p1 {
     width: 65%;
     height: auto ;
     margin-top: 20px;
@@ -413,10 +416,10 @@ section h1 {
     font-size: var(--police-small);
     padding-right: 40px;
 }
-#La_Vuelta .Billboard_affiches::after {
+#La-Vuelta .Billboard_affiches::after {
     top: 0; 
  }
-#La_Vuelta .Billboard_affiches  {
+#La-Vuelta .Billboard_affiches  {
     display: flex;
     width: 87.4%;
     height: fit-content;
@@ -424,12 +427,12 @@ section h1 {
     margin-bottom: 30px;
     left: 12.7%
 }
-#La_Vuelta .Billboard_affiches  img {
+#La-Vuelta .Billboard_affiches  img {
     width: 65%;
     padding-top: 20px;
     margin-bottom: 80px;
 }
-#La_Vuelta .Billboard_affiches  p {
+#La-Vuelta .Billboard_affiches  p {
     padding-top: 13px;
     width: 15%;
     font-size:var(--police-small);
@@ -572,6 +575,12 @@ section h1 {
     height: auto;
     margin-top: var(--margin);
     margin-bottom: 80px;
+}
+#Meg_tech .sliders .slider img {
+    display: none;
+}
+#Meg_tech .sliders .slider img.visible {
+    display: block;
 }
 #Meg_tech .sliders .slider-puces {
     margin-top: auto;
