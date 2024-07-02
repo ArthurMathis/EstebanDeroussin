@@ -80,7 +80,7 @@ class Slider {
         
         // On désélectionne l'ancienne puce
         if(index === 0)
-            this.puces[this.puces.length].classList.remove('visible');
+            this.puces[this.puces.length - 1].classList.remove('visible');
         else 
             this.puces[index - 1].classList.remove('visible');
 
@@ -94,7 +94,7 @@ class Slider {
             throw new Error("Erreur lors de la sélection d'une image. L'indice d'une image ne peut être nul ou dépassé le nombre d'images !");
 
         // On fait défiler le slider vers la nouvelle image
-        this.slides[index].scrollIntoView({ behavior: 'smooth' });
+        this.slides[index].scrollIntoView({ behavior: 'smooth' }); 
     }
     /// Méthode sélectionnant une page du slider
     setFocus(index) {
