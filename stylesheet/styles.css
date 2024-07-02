@@ -12,10 +12,10 @@
 }
 :root {
   --police-extra-big: 142px;
-  --police-big: 90px;
-  --police-normal: 18px;
-  --police-small: 15px;
-  --police-extra-small: 12px;
+  --police-big: 5em;
+  --police-normal: 1em;
+  --police-small: 1em;
+  --police-extra-small: 0.7em;
   --black: #000;
   --ligth-black: #888;
   --white: #fff;
@@ -117,7 +117,7 @@ a {
 }
 #menu a {
   position: relative;
-  height: var(--police-normal);
+  /*height: var(--police-normal);*/
   font-size: var(--police-small);
 }
 #menu a::before {

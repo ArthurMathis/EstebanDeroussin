@@ -138,5 +138,5 @@ projets.forEach(projet => {
 
 
 // Ajout du Slider (Preview)
-const preview_slider = new scrollSlider('#preview main .projet', '#projet-puce li');
+const preview_slider = new Slider('slider', '.projet', '#projet-puce li');
 preview_slider.init();

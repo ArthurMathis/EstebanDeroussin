@@ -5,22 +5,12 @@ body {
   margin: var(--margin);
 }
 
-@keyframes Open-Web-App-firstLogo {
-  0%, 50% {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    height: 6em;
-    width: auto;
-    transform: translate(-50%, -50%);
+@keyframes Open-Web-App {
+  from {
+    opacity: 0;
   }
-  100% {
-    position: fixed;
-    top: calc(var(--police-small) + var(--margin) + 50px);
-    left: var(--margin);
-    height: calc(50dvh - 150px);
-    width: auto;
-    transform: none;
+  to {
+    opacity: 1;
   }
 }
 #entete {
@@ -48,7 +38,9 @@ body {
   left: 0;
 }
 #entete .section_logo > img:last-of-type {
+  opacity: 0;
   left: calc(1.48 * (50dvh - 130px));
+  animation: Open-Web-App 2s ease forwards;
 }
 #entete .rectangle {
   width: 100%;
@@ -379,7 +371,7 @@ body {
   border-radius: 50%;
   border: 2px solid var(--white);
 }
-#preview #projet-puce li.active {
+#preview #projet-puce li.visible {
   background-color: var(--white);
 }
 

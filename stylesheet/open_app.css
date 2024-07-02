@@ -21,34 +21,11 @@ body {
     transform: none;
   }
 }
-@keyframes secondLogo {
-  0% {
-    left: var(--margin);
-    opacity: 0;
-    z-index: 1;
-  }
-  50% {
-    left: var(--margin);
-    opacity: 1;
-    z-index: 1;
-  }
-  100% {
-    left: calc(1.48 * (50dvh - 120px));
-    opacity: 1;
-    z-index: initial;
-  }
-}
 img {
   position: fixed;
   top: calc(var(--police-small) + 50px + var(--margin));
   width: calc(1.48 * (50dvh - 150px));
-}
-img:first-of-type {
   animation: firstLogo 2s ease forwards;
-}
-img:last-of-type {
-  opacity: 0;
-  animation: secondLogo 2s ease 2s forwards;
 }
 
 /*# sourceMappingURL=open_app.css.map */

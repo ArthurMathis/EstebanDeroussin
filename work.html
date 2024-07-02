@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="stylesheet/AnimateItems.css">
     <link rel="stylesheet" href="stylesheet/work.css">
 
-    <script src="scripts/in-view.min.js"></script>
-    <script src="scripts/simpleParallax.js"></script>
-    <script src="scripts/AnimateItems.js"></script>
-    <script src="scripts/ScrollMagic min.js"></script>
-    <script src="scripts/Sliders.js"></script>
+    <script src="scripts/object/in-view.min.js"></script>
+    <script src="scripts/object/simpleParallax.js"></script>
+    <script src="scripts/object/AnimateItems.js"></script>
+    <script src="scripts/object/ScrollMagic min.js"></script>
+    <script src="scripts/object/Sliders.js"></script>
 </head>
 <body>
 <nav id="menu" class="lignes">
@@ -35,7 +35,7 @@
     <a id="galerieButton">Galerie</a>
     <section id="time">
         <img src="assets/img/logo/Logo_Horloge.png">
-        <p id="horloge">17 : 16 : 26</p>
+        <p id="horloge">hh : mm : ss</p>
     </section>
     <p id="calendrier">Mer 3 avril</p>
 </nav>
@@ -101,7 +101,7 @@
             </div>
         </div>
     </main>
-    <div class="rectangle lignes"></div>
+    <div class="rectangle"></div>
 </section>
 <!-- Section Au delà de la Peur -->
 <section id="Au-dela-de-la-peur" class="projet-container lignes">
@@ -137,7 +137,7 @@
             </div>
         </div>
     </main>
-    <div class="rectangle lignes"></div>
+    <div class="rectangle"></div>
 </section>
 <!-- Section La Vuelta -->
 <section id="La_Vuelta" class="projet-container lignes">
@@ -189,7 +189,7 @@
                 </div>
             </div>
       </section> 
-      <div class="rectangle lignes"></div>
+      <div class="rectangle"></div>
 </section>
 <!-- Section Meg Technologie -->
 <section id="Meg_tech" class="projet-container lignes">
@@ -845,8 +845,8 @@
     </content>
 </section>
 
-<script src="scripts/data.js"></script>
-<script src="scripts/work-view.js"></script>
+<script src="scripts/app/data.js"></script>
+<script src="scripts/work/work-view.js"></script>
 <script>
     const galerieButton = document.getElementById('galerieButton');
     const closeGalerieButton = document.getElementById('closeButton');
