@@ -26,11 +26,26 @@ class Slider {
     }
 
     init() {
-        this.observer = new IntersectionObserver(this.resetInterval.bind(this), {
+        this.observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.startInterval();
+                } else {
+                    this.stopInterval();
+                }
+            });
+        }, {
             threshold: 0.1
         });
         this.observer.observe(this.parent);
     }
+    
+    // init() {
+    //     this.observer = new IntersectionObserver(this.resetInterval.bind(this), {
+    //         threshold: 0.1
+    //     });
+    //     this.observer.observe(this.parent);
+    // }
 
 
     // Téléchargement des données //
